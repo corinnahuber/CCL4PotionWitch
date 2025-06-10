@@ -1,4 +1,6 @@
-![WitchsBrewPlaceholderLogo](https://github.com/user-attachments/assets/062db6f0-c532-4d08-8a12-d0c5258b44da)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/062db6f0-c532-4d08-8a12-d0c5258b44da" alt="WitchsBrewPlaceholderLogo">
+</p>
 
 
 # CCL4
