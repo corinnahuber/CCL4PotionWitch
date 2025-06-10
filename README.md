@@ -6,7 +6,7 @@
 # CCL4
 Witch's Brew
 <br>
-by Sara Beslic, Corinna Huber, Helene urban, Nicoleta Dublea
+by Sara Beslic, Corinna Huber, Helene Urban, Nicoleta Dublea
 
 # Important Links
 ### Github Repository
