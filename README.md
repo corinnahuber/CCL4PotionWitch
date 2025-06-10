@@ -28,13 +28,17 @@ Once a place of peace, the forest is now stalked by restless ghosts, echoes of a
 
 ## Characters
 Main Character
+<br>
 (Witch, human)
+<br>
 Name: Raven
 
 Side Character
+<br>
 (Moth) Name: Wisp
 
 Enemies
+<br>
 Ghosts
 
 ## Goal
