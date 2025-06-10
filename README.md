@@ -27,17 +27,17 @@ Once a place of peace, the forest is now stalked by restless ghosts, echoes of a
  Armed only with her cunning and her potions, Raven must face each ghost and banish them all to restore the forest’s peace—or be consumed by the spirits that hunger in the shadows.
 
 ## Characters
-Main Character
+**Main Character**
 <br>
 (Witch, human)
 <br>
 Name: Raven
 
-Side Character
+**Side Character**
 <br>
 (Moth) Name: Wisp
 
-Enemies
+**Enemies**
 <br>
 Ghosts
 
@@ -46,14 +46,19 @@ The main goal is to defeat all ghosts in the small open world. The player starts
 and 3 additional recipes can be found in the world.
 
 ## SYSTEM DESIGN
-Player role:
+**Player role:**
+<br>
 The player takes on the role of a witch in a third-person perspective. To cleanse her haunted forest of ghosts, 
 she must brew potions using ingredients found in the woods. 
 However, she must remain cautious - ghosts lurk in the shadows.
-The witch’s Book:
+<br>
+**The witch’s Book:**
+<br>
 Her ancient book contains recipes for potions, listing all the necessary ingredients she must gather. 
 Each potion has a unique effect, essential for battling the ghosts.
-The ghosts:
+<br>
+**The ghosts:**
+<br>
 Ghost health depletes based on the potion used (Burn = fast damage etc.). 
 Their movement and attack patterns will be polished later to align with the rest of the game visuals and logic.
 
