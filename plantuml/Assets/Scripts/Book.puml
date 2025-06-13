@@ -6,10 +6,14 @@ class Book {
     + ToLeft() : void
     + IsAtFirstPotion() : bool
     + IsAtLastPotion() : bool
+    + BrewPotion() : void
+    + AreAllIngredientsInInventory() : bool
+    + RemoveUsedIngredients() : void
 }
 class "List`1"<T> {
 }
 MonoBehaviour <|-- Book
 Book --> "bookInstance" Book
+Book o-> "ingredientsList<InventorySlot>" "List`1"
 Book o-> "potionsList<PotionData>" "List`1"
 @enduml

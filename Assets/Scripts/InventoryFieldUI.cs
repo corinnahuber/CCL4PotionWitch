@@ -25,7 +25,7 @@ public class InventoryFieldUI : MonoBehaviour
     }
 
     public void SetSlot(ItemData item, int quantity, int index)
-    {
+    {  
         currentItem = item;
         slotIndex = index;
 
