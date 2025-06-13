@@ -1,0 +1,15 @@
+@startuml
+class Book {
+    + CurrentPotionIndex : int <<get>> = 0
+    + GetCurrentPotion() : PotionData
+    + ToRight() : void
+    + ToLeft() : void
+    + IsAtFirstPotion() : bool
+    + IsAtLastPotion() : bool
+}
+class "List`1"<T> {
+}
+MonoBehaviour <|-- Book
+Book --> "bookInstance" Book
+Book o-> "potionsList<PotionData>" "List`1"
+@enduml

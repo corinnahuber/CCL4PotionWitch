@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Moondew
   m_EditorClassIdentifier: 
   itemName: Moondew
-  itemImage: {fileID: 21300000, guid: d756c9beb06404447b484b628d8da281, type: 3}
+  itemImage: {fileID: 21300000, guid: e06ab6eda0662bc44a7ae813ce87ee2e, type: 3}
   itemMaxStack: 8

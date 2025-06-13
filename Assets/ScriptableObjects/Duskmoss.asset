@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Duskmoss
   m_EditorClassIdentifier: 
   itemName: Duskmoss
-  itemImage: {fileID: 21300000, guid: d756c9beb06404447b484b628d8da281, type: 3}
+  itemImage: {fileID: 21300000, guid: 6d391e1b5106ce349a33f4d3cd8fa3de, type: 3}
   itemMaxStack: 8

@@ -1,0 +1,6 @@
+@startuml
+class EnemyMovement {
+    + Quit() : void
+}
+MonoBehaviour <|-- EnemyMovement
+@enduml

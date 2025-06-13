@@ -1,0 +1,6 @@
+@startuml
+class DocsExampleActionsAssetReference {
+}
+MonoBehaviour <|-- DocsExampleActionsAssetReference
+DocsExampleActionsAssetReference --> "actions" InputActionAsset
+@enduml

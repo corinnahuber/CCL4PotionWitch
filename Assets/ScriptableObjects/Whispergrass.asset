@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Whispergrass
   m_EditorClassIdentifier: 
   itemName: Whispergrass
-  itemImage: {fileID: 21300000, guid: d756c9beb06404447b484b628d8da281, type: 3}
+  itemImage: {fileID: 21300000, guid: 3eee963decbebed468a13401fd7d7b24, type: 3}
   itemMaxStack: 8

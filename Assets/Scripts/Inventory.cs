@@ -29,7 +29,6 @@ public class Inventory: MonoBehaviour
             existingSlot.quantity++;
         }
         else if (inventoryItems.Count < InventoryUi.inventoryInstance.inventoryFields.Length)
-        //should actually check the length of the available slots in the UI, but for now we assume 12( instance of InventoryFieldUI)
         {
             inventoryItems.Add(new InventorySlot(item));
         }

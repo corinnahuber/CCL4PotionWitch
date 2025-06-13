@@ -1,0 +1,7 @@
+@startuml
+class InventoryUi {
+    + RefreshAllUI(slots:List<InventorySlot>) : void
+}
+MonoBehaviour <|-- InventoryUi
+InventoryUi o-> "inventoryInstance" InventoryUi
+@enduml

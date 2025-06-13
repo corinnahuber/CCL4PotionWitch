@@ -17,7 +17,6 @@ public class InventoryUi : MonoBehaviour
 
     }
 
-
     public void RefreshAllUI(List<InventorySlot> slots)
     {
         for (int i = 0; i < slots.Count; i++)

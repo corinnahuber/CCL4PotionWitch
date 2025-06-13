@@ -1,0 +1,21 @@
+@startuml
+class PotionData {
+    + potionName : string
+    + potionDescription : string
+    + PotionMaxStack : int = 3
+}
+enum PotionType {
+    Health,
+    Damage,
+    Destruction,
+    Stun,
+    Speed,
+}
+class "List`1"<T> {
+}
+ScriptableObject <|-- PotionData
+PotionData --> "potionImage" Sprite
+PotionData o-> "potionIngredients<ItemData>" "List`1"
+PotionData --> "potionType" PotionType
+PotionData +-- PotionType
+@enduml

@@ -26,13 +26,13 @@ public class Collectible : MonoBehaviour
     {
         if (playerInRange && Input.GetKeyDown(KeyCode.X))
         {
-            
+            Debug.Log($"key pressed: {Input.inputString}");
             bool added = Inventory.instance.AddItem(itemData);
-
             if (added)
             {
                 gameObject.SetActive(false); // Only hide if it was added
-                //StartCoroutine(RespawnAfterDelay());
+                                             //StartCoroutine(RespawnAfterDelay());
+
             }
             else
             {

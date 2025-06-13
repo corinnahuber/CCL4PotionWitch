@@ -1,0 +1,12 @@
+@startuml
+class ExampleEmbeddedActions {
+    + Awake() : void
+    + Update() : void
+    + OnJump(context:InputAction.CallbackContext) : void
+    + OnEnable() : void
+    + OnDisable() : void
+}
+MonoBehaviour <|-- ExampleEmbeddedActions
+ExampleEmbeddedActions --> "moveAction" InputAction
+ExampleEmbeddedActions --> "jumpAction" InputAction
+@enduml
