@@ -45,7 +45,7 @@ Ghosts
 The main goal is to defeat all ghosts in the small open world. The player starts out with 2 potion recipes that they can craft right away (sort of as a small tutorial), 
 and 3 additional recipes can be found in the world.
 
-## SYSTEM DESIGN
+## System Design
 **Player role:**
 <br>
 The player takes on the role of a witch in a third-person perspective. To cleanse her haunted forest of ghosts, 
@@ -64,6 +64,32 @@ Their movement and attack patterns will be polished later to align with the rest
 
 ![image](https://github.com/user-attachments/assets/f6d642a0-3300-4ea4-8d5d-6f794bae8cf6)
 
-## SYSTEM INFRASTRUCTURE
+## System Infrastructure
 ![ClassDiagram](https://github.com/user-attachments/assets/926b4e39-fdb8-4a14-94c6-d99f7624ed8c)
+
+### Update
+![ClassDiagram](https://github.com/user-attachments/assets/7e930688-ccdb-4ddb-bd98-aa4144c694bb)
+
+
+## 3D Models
+![RavenSideView](https://github.com/user-attachments/assets/9bc6d61b-8b9b-4e07-9e12-943aa2742af8)
+
+![WispFrontView](https://github.com/user-attachments/assets/53cbb4fe-cc27-40e3-a9ca-5bfd5306d8c2) ![WispSideView](https://github.com/user-attachments/assets/1622e2db-d034-439c-807c-a510047661fe)
+
+![GhostFrontView](https://github.com/user-attachments/assets/0b362b88-ae72-481f-8e93-6706488b1e24) ![GhostSideView](https://github.com/user-attachments/assets/d65cf083-0669-4427-b20d-ff4f2a73815c)
+
+![PotionBottleHeal](https://github.com/user-attachments/assets/8170665a-20b2-4471-ae83-ab120d051373) ![PotionBottleDamage](https://github.com/user-attachments/assets/d6c675a5-96ef-429b-b0b3-2c4f078fe6a2)
+
+![PotionBottleBlast](https://github.com/user-attachments/assets/c043cb99-8edc-46bd-9715-feddc8b0ec6b) ![PotionBottleSwift](https://github.com/user-attachments/assets/75939c77-a305-49a2-83e6-5db7c4a40e10)
+
+
+
+
+
+
+
+
+
+
+
 
