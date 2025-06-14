@@ -72,15 +72,30 @@ Their movement and attack patterns will be polished later to align with the rest
 
 
 ## 3D Models
-![RavenSideView](https://github.com/user-attachments/assets/9bc6d61b-8b9b-4e07-9e12-943aa2742af8)
+<!-- Raven (smaller) -->
+<p>
+  <img src="https://github.com/user-attachments/assets/9bc6d61b-8b9b-4e07-9e12-943aa2742af8" alt="RavenSideView" width="200">
+</p>
 
-![WispFrontView](https://github.com/user-attachments/assets/53cbb4fe-cc27-40e3-a9ca-5bfd5306d8c2) ![WispSideView](https://github.com/user-attachments/assets/1622e2db-d034-439c-807c-a510047661fe)
+<!-- Wisp images side by side -->
+<p>
+  <img src="https://github.com/user-attachments/assets/53cbb4fe-cc27-40e3-a9ca-5bfd5306d8c2" alt="WispFrontView" width="150">
+  <img src="https://github.com/user-attachments/assets/1622e2db-d034-439c-807c-a510047661fe" alt="WispSideView" width="150">
+</p>
 
-![GhostFrontView](https://github.com/user-attachments/assets/0b362b88-ae72-481f-8e93-6706488b1e24) ![GhostSideView](https://github.com/user-attachments/assets/d65cf083-0669-4427-b20d-ff4f2a73815c)
+<!-- Ghost images side by side -->
+<p>
+  <img src="https://github.com/user-attachments/assets/0b362b88-ae72-481f-8e93-6706488b1e24" alt="GhostFrontView" width="150">
+  <img src="https://github.com/user-attachments/assets/d65cf083-0669-4427-b20d-ff4f2a73815c" alt="GhostSideView" width="150">
+</p>
 
-![PotionBottleHeal](https://github.com/user-attachments/assets/8170665a-20b2-4471-ae83-ab120d051373) ![PotionBottleDamage](https://github.com/user-attachments/assets/d6c675a5-96ef-429b-b0b3-2c4f078fe6a2)
-
-![PotionBottleBlast](https://github.com/user-attachments/assets/c043cb99-8edc-46bd-9715-feddc8b0ec6b) ![PotionBottleSwift](https://github.com/user-attachments/assets/75939c77-a305-49a2-83e6-5db7c4a40e10)
+<!-- Potion bottles side by side -->
+<p>
+  <img src="https://github.com/user-attachments/assets/8170665a-20b2-4471-ae83-ab120d051373" alt="PotionBottleHeal" width="100">
+  <img src="https://github.com/user-attachments/assets/d6c675a5-96ef-429b-b0b3-2c4f078fe6a2" alt="PotionBottleDamage" width="100">
+  <img src="https://github.com/user-attachments/assets/c043cb99-8edc-46bd-9715-feddc8b0ec6b" alt="PotionBottleBlast" width="100">
+  <img src="https://github.com/user-attachments/assets/75939c77-a305-49a2-83e6-5db7c4a40e10" alt="PotionBottleSwift" width="100">
+</p>
 
 
 
