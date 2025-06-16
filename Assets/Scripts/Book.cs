@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Book : MonoBehaviour
@@ -52,20 +53,14 @@ public class Book : MonoBehaviour
     {
         if (AreAllIngredientsInInventory())
         {
-            Debug.Log("Brewing potion: " + GetCurrentPotion().potionName);
             RemoveUsedIngredients(); // Remove ingredients from inventory
-                                     //see if the book updates automatically after brewing the potion
-            Debug.Log("inventory items after brewing:");
-            foreach (var slot in Inventory.instance.inventoryItems)
-            {
-                Debug.Log(slot.itemData.itemName + " x" + slot.quantity);
-            }
+
+            PotionInventory.instance.AddPotion(GetCurrentPotion()); 
+
+            PotionsInventoryUI.instance.PotionInventoryUIUpdate(); // Update the potion inventory UI
         }
-        else
-            Debug.Log("Cannot brew potion. Not all ingredients are in the inventory.");
-
+        
     }
-
 
 
     public bool AreAllIngredientsInInventory()

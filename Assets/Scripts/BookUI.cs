@@ -27,26 +27,11 @@ public class BookUI : MonoBehaviour
     [SerializeField]
     Button rightButton;
 
-
-    void Start()
+    void Awake()
     {
         bookInstance = this;
-        leftButton.interactable = false;
-
-        PotionData currentPotion = Book.bookInstance.GetCurrentPotion();
-        potionName.text = currentPotion.potionName;
-        potionDescription.text = currentPotion.potionDescription;
-        potionImage.sprite = currentPotion.potionImage;
-        potionTypeText.text = currentPotion.potionType.ToString();
-
-        if (Book.bookInstance.CurrentPotionIndex == 0)
-        {
-            leftButton.interactable = false; // Disable left button if at the first potion
-            rightButton.interactable = true;
-        }
-        UpdateBookIngredientsImages();
+        UpdatePotionDisplay();
     }
-
 
 
     //this method is called every frame to make sure the book is updated while its active not just when flipping pages!!
@@ -70,16 +55,16 @@ public class BookUI : MonoBehaviour
             return; // No potions to display
         }
 
+        if (Book.bookInstance.AreAllIngredientsInInventory())
+            brewButton.interactable = true; // Enable brew button if all ingredients are available
+        else
+            brewButton.interactable = false; // Disable brew button if not all ingredients are available
+
         PotionData currentPotion = Book.bookInstance.GetCurrentPotion();
         potionName.text = currentPotion.potionName;
         potionDescription.text = currentPotion.potionDescription;
         potionImage.sprite = currentPotion.potionImage;
         potionTypeText.text = currentPotion.potionType.ToString();
-
-        if (Book.bookInstance.AreAllIngredientsInInventory())
-            brewButton.interactable = true; // Enable brew button if all ingredients are available
-        else
-            brewButton.interactable = false; // Disable brew button if not all ingredients are available
 
         UpdateBookIngredientsImages();
     }

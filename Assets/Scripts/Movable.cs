@@ -15,66 +15,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private InputActionReference moveAction;
     [SerializeField] private InputActionReference cameraMovement;
 
-    /*
-    void OnEnable()
-    {
-        // Ensure the input actions are enabled when the script is enabled
-        moveAction.action.Enable();
-        cameraMovement.action.Enable();
-    }
-
-    void OnDisable()
-    {
-        // Disable the input actions when the script is disabled
-        moveAction.action.Disable();
-        cameraMovement.action.Disable();
-    }
-
-    void Update()
-    {
-        HandleMovement();
-        HandleCameraMovement();
-    }
-
-
-    void HandleMovement()
-    {
-        Vector2 moveInput = moveAction.action.ReadValue<Vector2>();
-        Vector3 moveDirection = new Vector3(moveInput.x, 0, moveInput.y).normalized;
-
-        if (moveDirection.magnitude > 0)
-        {
-            transform.position += moveDirection * movementPerSecond * Time.deltaTime;
-        }
-
-        if (moveInput.x != 0)
-        {
-            float rotation = moveInput.x * rotationSpeed * Time.deltaTime;
-            transform.Rotate(0, rotation, 0);
-        }
-    }
-    
-
-    void HandleCameraMovement()
-    {
-        Vector2 cameraInput = cameraMovement.action.ReadValue<Vector2>();
-        Vector3 zoomDirection = mainCamera.transform.forward * cameraInput.y * zoomSpeed * Time.deltaTime;
-        Vector3 newCamPos = mainCamera.position + zoomDirection;
-
-        float distance = Vector3.Distance(transform.position, newCamPos);
-        if (distance >= minZoom && distance <= maxZoom)
-        {
-            mainCamera.position = newCamPos;
-        }
-
-        if (cameraInput.x != 0)
-        {
-            mainCamera.RotateAround(transform.position, transform.up, cameraInput.x * rotationSpeed * Time.deltaTime);
-        }
-    }
-}
-*/
-
+ 
 
     void Update()
     {
