@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f0b5fd6b74095489a7f546f3fe4b00, type: 3}
+  m_Name: Stun
+  m_EditorClassIdentifier: 
+  potionName: Stun Potion
+  potionImage: {fileID: 21300000, guid: fc270baa9be259d40b2c0d8f37c5220c, type: 3}
+  potionDescription: "Moondew and Glowleaf blend to bind time itself.\n\nA shimmering
+    silver elixir that dances in the vial like starlight on still water. The Stun
+    Potion suspends its victim in a daze, locking their senses for 3 seconds \u2014
+    enough time to vanish, strike, or escape. Best brewed during lunar convergence,
+    it hums faintly when near danger, as if hungry for chaos.\n\n"
+  PotionMaxStack: 3
+  potionIngredients:
+  - {fileID: 11400000, guid: 8877674f8e7dc474e9cc4b3fac909a6d, type: 2}
+  - {fileID: 11400000, guid: f52a33885f7c57443be53e7044c036c1, type: 2}
+  potionType: 3

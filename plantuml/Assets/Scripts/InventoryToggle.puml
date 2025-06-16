@@ -1,0 +1,5 @@
+@startuml
+class InventoryToggle {
+}
+MonoBehaviour <|-- InventoryToggle
+@enduml

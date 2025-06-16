@@ -1,0 +1,6 @@
+@startuml
+class NavMeshLinkEditorTests {
+    + TearDown() : void
+    + ReverseDirection_SwapsStartAndEndPoints(position:Vector3, orientation:Quaternion, scale:Vector3) : void
+}
+@enduml

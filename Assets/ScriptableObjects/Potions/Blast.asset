@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f0b5fd6b74095489a7f546f3fe4b00, type: 3}
+  m_Name: Blast
+  m_EditorClassIdentifier: 
+  potionName: Blast Potion
+  potionImage: {fileID: 21300000, guid: 9cb1e563cdeeeff42a8df145f7989ddb, type: 3}
+  potionDescription: "Darkest brew of destruction, born from Shadowroot and Nightberry.\n\nThe
+    Ritest Potion is death in a bottle \u2014 a swirling void that devours light
+    and mercy alike. Brewed during the witching hour beneath a new moon, it depletes
+    all of an enemy\u2019s health. It\u2019s said that those who fall to its power
+    vanish without a trace, their souls caught in the twisting fog that follows the
+    scent of its bitter smoke."
+  PotionMaxStack: 3
+  potionIngredients:
+  - {fileID: 11400000, guid: ceb6794daa122eb49902dfacec96062b, type: 2}
+  - {fileID: 11400000, guid: cf4dace44893c7b4c873d3211dd81028, type: 2}
+  potionType: 0

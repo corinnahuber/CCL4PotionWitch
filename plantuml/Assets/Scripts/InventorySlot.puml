@@ -1,0 +1,7 @@
+@startuml
+class InventorySlot {
+    + quantity : int
+    + InventorySlot(item:ItemData)
+}
+InventorySlot --> "itemData" ItemData
+@enduml

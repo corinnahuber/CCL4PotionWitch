@@ -1,0 +1,14 @@
+@startuml
+class BookUI {
+    + UpdateBookIngredientsImages() : void
+}
+class "List`1"<T> {
+}
+MonoBehaviour <|-- BookUI
+BookUI o-> "bookInstance" BookUI
+BookUI --> "potionName" TextMeshProUGUI
+BookUI --> "potionDescription" TextMeshProUGUI
+BookUI --> "potionImage" Image
+BookUI --> "potionTypeText" TextMeshProUGUI
+BookUI o-> "ingredientsList<InventorySlot>" "List`1"
+@enduml

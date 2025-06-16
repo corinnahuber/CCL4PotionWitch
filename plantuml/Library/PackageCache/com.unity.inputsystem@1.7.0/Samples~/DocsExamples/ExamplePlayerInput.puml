@@ -1,0 +1,8 @@
+@startuml
+class ExamplePlayerInput {
+    + OnMove(context:InputAction.CallbackContext) : void
+    + OnJump(context:InputAction.CallbackContext) : void
+    + Update() : void
+}
+MonoBehaviour <|-- ExamplePlayerInput
+@enduml
