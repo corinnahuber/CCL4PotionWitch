@@ -4,8 +4,9 @@ using Unity.AI.Navigation;
 using Unity.VisualScripting;
 using UnityEditor.Rendering;
 using UnityEngine.AI;
+using UnityEngine.UI;
 #if UNITY_EDITOR
-    using UnityEditor;
+using UnityEditor;
 #endif
 using UnityEngine;
 
@@ -13,27 +14,44 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
 
+    public static EnemyMovement instance;
+
+    public PlayerMovement player; // Reference to the PlayerMovement script
+
+    public Enemy enemy; // Reference to the Enemy script
+
+    public float chaseRange;
+    public NavMeshAgent agent;
+
     [SerializeField]
     GameObject target;
+    
+    [SerializeField]
+    private Image fightIcon;
 
     [SerializeField]
     Transform centerPoint; //CHANGE this later when we have a full world!!
 
-    private float chaseRange = 2f;
     private float normalSpeed;
-    private float chaseSpeed = 8f;
+    private float chaseSpeed = 10f;
     private float wanderTimer = 0f;
     private float wanderRange = 20f; // Range within which the enemy can wander
     private float wanderDelay = 5f; // How often to pick new random destination
-    private NavMeshAgent agent;
     private Vector3 wanderTarget;
     private bool playerCaught = false;
+    
 
 
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
+
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
+            
         normalSpeed = agent.speed;
+        fightIcon.enabled = false; // Hide the fight icon initially
 
         SetNewWanderTarget();
     }
@@ -52,8 +70,9 @@ public class EnemyMovement : MonoBehaviour
             if (NavMesh.SamplePosition(randomDirection, out NavMeshHit hit, 2.0f, NavMesh.AllAreas))
                 return hit.position;
         }
-        return Vector3.zero; // Return zero if no valid position is found after 30 attempts
+        return Vector3.zero; 
     }
+
 
     void Update()
     {
@@ -61,20 +80,28 @@ public class EnemyMovement : MonoBehaviour
 
         if (distanceToPlayer < chaseRange)
         {
-            // chase the player
             agent.speed = chaseSpeed;
+            fightIcon.enabled = true;
             agent.SetDestination(target.transform.position);
+
 
             if (playerCaught)
             {
-                //for now...later will remove the heart and relocate the player!
-                Quit();
-                Debug.Log("Player caught!");
+                enemy.TakeDamageHearts();
+                //return to another position
+
+                if (player.heartIcons.Count <= 0)
+                {
+
+                    //Quit();
+                }
             }
         }
+        
+
         else
         {
-            // Wandering behavior
+            //if not the enemy is not chasing the player anymore it will wander around
             agent.speed = normalSpeed;
             agent.isStopped = false;
 
@@ -83,15 +110,32 @@ public class EnemyMovement : MonoBehaviour
             {
                 SetNewWanderTarget();
                 wanderTimer = 0f;
+
             }
+
         }
     }
+
+
+
+    void OnMouseDown()
+    {
+        float distanceToPlayer = Vector3.Distance(target.transform.position, transform.position);
+        if (distanceToPlayer < chaseRange)
+        {
+            Debug.Log("Enemy clicked! Player is within chase range.");
+            PotionEffects.instance.PotionOnEnemy();
+        }
+    }
+   
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
             playerCaught = true;
     }
+
+
 
     void SetNewWanderTarget()
     {
@@ -100,6 +144,7 @@ public class EnemyMovement : MonoBehaviour
     }
 
 
+    //remove this later!
     void OnDrawGizmosSelected()
     {
         // Draw chase range in red
@@ -114,15 +159,17 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
+
     public void Quit()
-    {
-        #if UNITY_EDITOR
-            EditorApplication.isPlaying = false;
-        #else
-            Application.Quit();
-        #endif
+{
+    #if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+    #else
+        Application.Quit();
+    #endif
     }
 }
+
 
 
  
