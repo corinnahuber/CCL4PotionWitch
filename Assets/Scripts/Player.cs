@@ -1,8 +1,13 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    public List<Image> heartIcons = new List<Image>();
     public float movementPerSecond = 4f;
     public float rotationSpeed = 80f;
     public float zoomSpeed = 20f;

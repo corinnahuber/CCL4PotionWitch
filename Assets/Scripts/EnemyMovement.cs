@@ -14,38 +14,42 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
 
-
     public static EnemyMovement instance;
+
+    public PlayerMovement player; // Reference to the PlayerMovement script
+
+    public Enemy enemy; // Reference to the Enemy script
+
+    public float chaseRange;
+    public NavMeshAgent agent;
 
     [SerializeField]
     GameObject target;
-
-    public int enemyHealth;
+    
+    [SerializeField]
+    private Image fightIcon;
 
     [SerializeField]
     Transform centerPoint; //CHANGE this later when we have a full world!!
 
-    public float chaseRange;
     private float normalSpeed;
     private float chaseSpeed = 10f;
     private float wanderTimer = 0f;
     private float wanderRange = 20f; // Range within which the enemy can wander
     private float wanderDelay = 5f; // How often to pick new random destination
-    public NavMeshAgent agent;
     private Vector3 wanderTarget;
     private bool playerCaught = false;
-    [SerializeField]
-    private Image fightIcon;
+    
 
 
     void Start()
     {
 
-        //EnemyBar.instance.SetMaxHealth(enemyHealth); 
-        //EnemyBar.instance.EnemyHealth(enemyHealth); 
-       // Debug.Log("Enemy Health: " + enemyHealth);
-        //Debug.Log("Enemy Bar Initialized");
-     
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
+            
         normalSpeed = agent.speed;
         fightIcon.enabled = false; // Hide the fight icon initially
 
@@ -66,7 +70,7 @@ public class EnemyMovement : MonoBehaviour
             if (NavMesh.SamplePosition(randomDirection, out NavMeshHit hit, 2.0f, NavMesh.AllAreas))
                 return hit.position;
         }
-        return Vector3.zero; // Return zero if no valid position is found after 30 attempts
+        return Vector3.zero; 
     }
 
 
@@ -83,8 +87,14 @@ public class EnemyMovement : MonoBehaviour
 
             if (playerCaught)
             {
-                //for now...later will remove the heart and relocate the player!
-                //Quit();
+                enemy.TakeDamageHearts();
+                //return to another position
+
+                if (player.heartIcons.Count <= 0)
+                {
+
+                    //Quit();
+                }
             }
         }
         

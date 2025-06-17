@@ -12,11 +12,14 @@ public class PotionEffects : MonoBehaviour
 
     public static PotionEffects instance;
 
+    public Enemy enemyHealth; 
+
+    public EnemyBar enemyBar; // Reference to the enemy's health bar
+
     public NavMeshAgent enemy;
 
     private float stunDuration = 3f;
     private Coroutine stunCoroutine;
-    private int damage = 10;
 
 
     private void Awake()
@@ -28,7 +31,6 @@ public class PotionEffects : MonoBehaviour
     }
 
 
-
     public void PotionOnEnemy()
     {
 
@@ -36,6 +38,7 @@ public class PotionEffects : MonoBehaviour
         {
             // Get the selected potion data
             PotionData PotionSelected = PotionInventory.instance.potionsMade[PotionsInventoryUI.instance.selectedIndex];
+            Debug.Log("Potion selected: " + PotionSelected.potionType);
 
             if (PotionSelected.potionType != PotionData.PotionType.Health &&
                 PotionSelected.potionType != PotionData.PotionType.Speed)
@@ -44,12 +47,10 @@ public class PotionEffects : MonoBehaviour
                 switch (PotionSelected.potionType)
                 {
                     case PotionData.PotionType.Damage:
-                        //DealDamage(); // Deal damage to the enemy
-                        Debug.Log("Potion of Damage used on enemy: " + enemy.name);
+                        DealDamage(enemyHealth.enemyDamage);
                         break;
 
                     case PotionData.PotionType.Destruction:
-                        Debug.Log("Potion of Destruction used on enemy: " + enemy.name);
                         Destroy(enemy.gameObject);
                         break;
 
@@ -88,15 +89,15 @@ public class PotionEffects : MonoBehaviour
     }
 
 
-    public void DealDamage()
+    void DealDamage(int enemyDamage)
     {
-       
-        EnemyMovement.instance.enemyHealth -= damage; // Reduce enemy health by damage amount
-        EnemyBar.instance.EnemyHealth(EnemyMovement.instance.enemyHealth); 
 
-        if (EnemyBar.instance.slider.value == 0)
+        enemyHealth.currentHealth -= enemyDamage;
+        enemyBar.EnemyHealth(enemyHealth.currentHealth); // Update the enemy's health bar UI
+
+        if (enemyHealth.currentHealth <= 0)
         {
-            Destroy(enemy); 
+            Destroy(enemy.gameObject); // Destroy the enemy object
         }
     }
 }

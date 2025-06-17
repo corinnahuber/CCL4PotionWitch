@@ -6,11 +6,9 @@ using UnityEngine.UI;
 public class EnemyBar : MonoBehaviour
 {
     public Slider slider;
-    public static EnemyBar instance;
 
     public Gradient gradient;
     public Image fill;
-
 
 
 
