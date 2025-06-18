@@ -24,7 +24,7 @@ public class Collectible : MonoBehaviour
 
      void Update()
     {
-        if (playerInRange && Input.GetKeyDown(KeyCode.X))
+        if (playerInRange && Input.GetKeyDown(KeyCode.E) || playerInRange && Input.GetMouseButtonDown(0))
         {
             Debug.Log($"key pressed: {Input.inputString}");
             bool added = Inventory.instance.AddItem(itemData);
