@@ -5,7 +5,7 @@
 
 # CCL4
 Course: CCL4 SS 2025 (5 ECTS, 3 SWS)
-Student ID: cc231032,...
+Student ID: cc231032, cc231043, cc231045
 BCC Group: B and C
 Witch's Brew
 <br>
@@ -46,7 +46,9 @@ Name: Raven
 
 **Side Character**
 <br>
-(Moth) Name: Wisp
+(Moth)
+<br>
+Name: Wisp
 
 **Enemies**
 <br>
@@ -79,14 +81,34 @@ Their movement and attack patterns will be polished later to align with the rest
 
 ## Key Features and Implementation Detail
 - 3D Modeling
-  1.
-  2.
-  3.
+  1. Raven (Main Character)
+  2. Wisp (Side Character)
+  3. Ghost Enemy
+  4. Cauldron
+  5. 5 Different kinds of Potion Bottles
+  6. 8 Different kinds of Collectable Items
+  7. Witch House Full Interior
+     - Candles
+     - Books
+     - Desk
+     - Stool
+     - Broom
+     - Carpet
+     - 2 Different Plants
+     - Mirror
+  8. Three different kinds of Pine Trees
+  9. Pumpkin
+  10. Well
 
 - Game Audio
-  1.
-  2.
-  3.
+  1. Pickup Sound
+  2. Button Click
+  3. Book Flipping
+  4. Player getting attacked
+  5. Different sounds for areas (cave, lake, graveyard,...)
+  6. Ambient Sounds (wind, forest, main menu audio)
+  7. Ghost Sound
+  8. Footsteps
 
 - Unity Coding
   1.
@@ -94,9 +116,28 @@ Their movement and attack patterns will be polished later to align with the rest
   3.
 
 - C# & Theory of CG&A
+  1.
+  2.
+  3.
 
+### Implementation Logic Explained
+STILL MISSING
 
+### Achievements
+- Very proud of the characters we made, it was a long and hard process at times, especially the rigging and weight painting part for it to look good when animating, but we are really proud of the outcome
+- We tried to make as many assets as possible ourselves so the whole game would have a nice feel to it, we are very happy with how the world looks and feels like
+- We were able to implement almost every function we planned on having, we have a nice combat system, the inventory works really well, the witch is able to brew potions as planned and use them to fight off the ghosts
 
+### Major Challenges and Solutions
+- One of the biggest challenges was definitely the rigging part and adjusting the weight painting accordingly, it just took a lot longer than expected
+
+### Minor Challenges and Solutions
+- Something I learned when 3D modeling was its very important to keep close attention to the normals of a model, because if the normals are flipped (red) unity won't show those faces, and that can be really painful to fix, the solution is to just always keep checking on the normals in blender
+
+### Reflections on the Project
+- The animations could be smoother
+- Would have loved to make all the assets ourselves (like mountains, rocks and graveyard)
+- Recording some of the audio elements would have been nice
 
 
 
@@ -130,8 +171,21 @@ Their movement and attack patterns will be polished later to align with the rest
   <img src="https://github.com/user-attachments/assets/8170665a-20b2-4471-ae83-ab120d051373" alt="PotionBottleHeal" width="100">
   <img src="https://github.com/user-attachments/assets/d6c675a5-96ef-429b-b0b3-2c4f078fe6a2" alt="PotionBottleDamage" width="100">
   <img src="https://github.com/user-attachments/assets/c043cb99-8edc-46bd-9715-feddc8b0ec6b" alt="PotionBottleBlast" width="100">
+  <img src="https://github.com/user-attachments/assets/b7775062-e935-49ba-944e-b762cc086325" alt="PotionBottleStun" width=100">
   <img src="https://github.com/user-attachments/assets/75939c77-a305-49a2-83e6-5db7c4a40e10" alt="PotionBottleSwift" width="100">
 </p>
+
+<!-- Cauldron -->
+<p>
+  <img src="https://github.com/user-attachments/assets/dc1845d3-b384-4583-afbd-b3f28150be03" alt="Cauldron" widht="150">
+</p>
+
+<!-- Witch House Interior -->
+<p>
+  <img src="https://github.com/user-attachments/assets/20b5bb8c-7ba1-41cb-bd8c-9302cba75b84" alt="WitchHouse01" widht="200">
+  <img src="https://github.com/user-attachments/assets/b97e5bc7-2b7f-47e0-9eb5-c165bac3dcfa" alt="WitchHouse02" widht="200">
+</p>
+
 
 
 
