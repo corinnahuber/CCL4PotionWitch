@@ -5,11 +5,16 @@
 
 # CCL4
 Course: CCL4 SS 2025 (5 ECTS, 3 SWS)
+<br>
 Student ID: cc231032, cc231043, cc231045
+<br>
 BCC Group: B and C
+<br>
 Witch's Brew
 <br>
 by Sara Beslic, Corinna Huber, Helene Urban, Nicoleta Dublea
+
+<br>
 
 Witch’s Brew” is a dark, low-poly 3D adventure game set in a haunted forest. You play as Raven, a young witch who must collect ingredients, brew magical potions, and banish ghostly enemies that spawn from an ancient graveyard. 
 Guided by Wisp, a mysterious moth-like creature, players explore a small open world filled with spooky atmosphere and magical danger. This project was created to apply and combine skills in 3D modeling, animation, 
