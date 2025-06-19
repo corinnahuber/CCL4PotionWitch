@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/062db6f0-c532-4d08-8a12-d0c5258b44da" alt="WitchsBrewPlaceholderLogo">
+  <img src="https://github.com/user-attachments/assets/81575a37-8e73-48ed-b636-efc306fe902a" alt="WitchsBrewLogo">
 </p>
 
 
