@@ -18,6 +18,7 @@ public class Collectible : MonoBehaviour
 
     void Update()
     {
+
         if (playerInRange && Input.GetKey(KeyCode.E) || playerInRange && Input.GetMouseButtonDown(0))
         {
             Debug.Log($"key pressed: {Input.inputString}");
