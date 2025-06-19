@@ -15,19 +15,19 @@ Witch's Brew
 by Sara Beslic, Corinna Huber, Helene Urban, Nicoleta Dublea
 
 ## Roles
-Sara Beslic
+**Sara Beslic**
 <br>
 Coding, Game Logic
 <br>
-Corinna Huber
+**Corinna Huber**
 <br>
 3D Modeling, Documentation, Story and Game Design, Organisation
 <br>
-Helene Urban
+**Helene Urban**
 <br>
 3D Modeling, Game Trailer, Helped with Game Audio
 <br>
-Nicoleta Dublea
+**Nicoleta Dublea**
 <br>
 UI Design, Game Audio
 
