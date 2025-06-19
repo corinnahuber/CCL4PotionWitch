@@ -139,6 +139,7 @@ STILL MISSING
 
 ### Major Challenges and Solutions
 - One of the biggest challenges was definitely the rigging part and adjusting the weight painting accordingly, it just took a lot longer than expected
+- I faced a lot of challenges in Blender with exporting the right files and also animations not saving, but now I know how to tackle those problems correctly which will safe me a lot of time, energy and struggle in the future
 
 ### Minor Challenges and Solutions
 - Something I learned when 3D modeling was its very important to keep close attention to the normals of a model, because if the normals are flipped (red) unity won't show those faces, and that can be really painful to fix, the solution is to just always keep checking on the normals in blender
