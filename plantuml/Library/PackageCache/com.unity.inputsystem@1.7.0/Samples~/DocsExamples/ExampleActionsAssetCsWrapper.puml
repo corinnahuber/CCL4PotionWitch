@@ -1,0 +1,5 @@
+@startuml
+class DocsExampleActionsAssetCsWrapper {
+}
+MonoBehaviour <|-- DocsExampleActionsAssetCsWrapper
+@enduml

@@ -1,0 +1,15 @@
+@startuml
+!include .\\Assets\Scripts\Book.puml
+!include .\\Assets\Scripts\BookToggle.puml
+!include .\\Assets\Scripts\BookUI.puml
+!include .\\Assets\Scripts\Collectable.puml
+!include .\\Assets\Scripts\EnemyMovement.puml
+!include .\\Assets\Scripts\Inventory.puml
+!include .\\Assets\Scripts\InventoryFieldUI.puml
+!include .\\Assets\Scripts\InventorySlot.puml
+!include .\\Assets\Scripts\InventoryToggle.puml
+!include .\\Assets\Scripts\InventoryUI.puml
+!include .\\Assets\Scripts\ItemData.puml
+!include .\\Assets\Scripts\Movable.puml
+!include .\\Assets\Scripts\PotionData.puml
+@enduml

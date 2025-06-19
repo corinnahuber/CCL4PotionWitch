@@ -1,0 +1,8 @@
+@startuml
+class ItemData {
+    + itemName : string
+    + itemMaxStack : int = 8
+}
+ScriptableObject <|-- ItemData
+ItemData --> "itemImage" Sprite
+@enduml

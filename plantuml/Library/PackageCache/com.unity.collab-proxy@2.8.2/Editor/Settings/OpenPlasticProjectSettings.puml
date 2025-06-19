@@ -1,0 +1,4 @@
+@startuml
+class OpenPlasticProjectSettings <<static>> {
+}
+@enduml
