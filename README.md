@@ -14,6 +14,23 @@ Witch's Brew
 <br>
 by Sara Beslic, Corinna Huber, Helene Urban, Nicoleta Dublea
 
+## Roles
+Sara Beslic
+<br>
+Coding, Game Logic
+<br>
+Corinna Huber
+<br>
+3D Modeling, Documentation, Story and Game Design, Organisation
+<br>
+Helene Urban
+<br>
+3D Modeling, Game Trailer, Helped with Game Audio
+<br>
+Nicoleta Dublea
+<br>
+UI Design, Game Audio
+
 <br>
 
 Witch’s Brew” is a dark, low-poly 3D adventure game set in a haunted forest. You play as Raven, a young witch who must collect ingredients, brew magical potions, and banish ghostly enemies that spawn from an ancient graveyard. 
