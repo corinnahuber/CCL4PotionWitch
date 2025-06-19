@@ -12,6 +12,7 @@ public class Billboard : MonoBehaviour
     {
         if (mainCamera == null)
         {
+            // If no camera is assigned, try to find the main camera
             mainCamera = Camera.main;
         }
 

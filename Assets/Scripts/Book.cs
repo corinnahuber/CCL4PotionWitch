@@ -57,6 +57,12 @@ public class Book : MonoBehaviour
 
             PotionInventory.instance.AddPotion(GetCurrentPotion()); 
 
+            /*
+            if (potionsList.Count == 1)
+            {
+                PotionsInventoryUI.instance.selectedIndex = 0; // If this is the only potion, select it
+            }*/
+
             PotionsInventoryUI.instance.PotionInventoryUIUpdate(); // Update the potion inventory UI
         }
         

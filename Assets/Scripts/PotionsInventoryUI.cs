@@ -33,7 +33,7 @@ public class PotionsInventoryUI : MonoBehaviour
 
         for (int i = 0; i < count; i++)
         {
-            int index = i; 
+            int index = i;
             potionButtons[i].onClick.AddListener(() => SelectedPotion(index));
             potionButtons[i].interactable = false; // Initially disable the button
 
@@ -46,15 +46,43 @@ public class PotionsInventoryUI : MonoBehaviour
 
     public void PotionInventoryUIUpdate()
     {
+        int count = PotionInventory.instance.potionsMade.Count;
 
+        if (count == 0)
+        {
+            // No potions left – reset selection and highlights
+            if (selectedIndex != -1)
+            {
+                potionBackgroundImage[selectedIndex].color = Color.gray;
+                selectedIndex = -1;
+            }
+        }
+        else
+        {
+            // Auto-select the first potion only if none selected
+            if (selectedIndex == -1 && count > 0)
+            {
+                selectedIndex = 0;
+            }
+
+            // Safety: if selectedIndex is now out of bounds (e.g. item was removed), reset it
+            if (selectedIndex >= count)
+            {
+                selectedIndex = 0; // fallback to 0 or -1 if you want no selection
+            }
+        }
+        
         for (int i = 0; i < potionButtons.Length; i++)
         {
-            if (i < PotionInventory.instance.potionsMade.Count)
+            if (i < count)
             {
                 PotionData potion = PotionInventory.instance.potionsMade[i];
                 potionImage[i].enabled = true; // Show the potion image
                 potionImage[i].sprite = potion.potionImage; // Assuming PotionData has a sprite field
                 potionButtons[i].interactable = true; // Enable the button
+
+                potionBackgroundImage[i].color =
+                (i == selectedIndex) ? pickedColor : Color.gray;
             }
             else
             {
@@ -64,31 +92,24 @@ public class PotionsInventoryUI : MonoBehaviour
 
             }
         }
-    }
+        }
+     
 
 
     public int SelectedPotion(int index)
     {
-        // Deselect the previously selected button if any
-        if (selectedIndex != -1 && selectedIndex != index)
-        {
+
+        if (index == selectedIndex)
+                return selectedIndex;   
+
+        // reset previous highlight
+        if (selectedIndex != -1)
             potionBackgroundImage[selectedIndex].color = Color.gray;
-        }
-        //ex. if selectedIndex is 0 and index is 1, it will deselect the potion at index 0
-        if (selectedIndex == index)
-        {
-            // Deselect if clicked again
-            potionBackgroundImage[index].color = Color.gray;
-            selectedIndex = -1;
-        }
-        else
-        {
-            // Select new one
-            potionBackgroundImage[index].color = pickedColor;
-            selectedIndex = index;
-        }
+
+        // select new one
+        selectedIndex = index;
+        potionBackgroundImage[index].color = pickedColor;
         return selectedIndex;
-        // Return the index of the selected potion that will be used to get the potion data when clicked on enemy!
     }
 
 }

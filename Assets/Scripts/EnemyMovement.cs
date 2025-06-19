@@ -14,12 +14,9 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
 
-    public static EnemyMovement instance;
-
+    public static PotionEffects effects; 
     public PlayerMovement player; // Reference to the PlayerMovement script
-
     public Enemy enemy; // Reference to the Enemy script
-
     public float chaseRange;
     public NavMeshAgent agent;
 
@@ -33,27 +30,38 @@ public class EnemyMovement : MonoBehaviour
     Transform centerPoint; //CHANGE this later when we have a full world!!
 
     private float normalSpeed;
-    private float chaseSpeed = 10f;
+    private float chaseSpeed = 6f;
     private float wanderTimer = 0f;
-    private float wanderRange = 20f; // Range within which the enemy can wander
+    private float wanderRange = 25f; // Range within which the enemy can wander
     private float wanderDelay = 5f; // How often to pick new random destination
     private Vector3 wanderTarget;
     private bool playerCaught = false;
-    
+
+    bool isOnCooldown = false;
+    public float chaseCooldownDuration = 5f;
 
 
+
+    private void Awake()
+    {
+        if (effects == null)
+            effects = FindObjectOfType<PotionEffects>();
+
+    }
+   
     void Start()
     {
 
-        if (instance == null)
-            instance = this;
-        else
-            Destroy(gameObject);
-            
         normalSpeed = agent.speed;
         fightIcon.enabled = false; // Hide the fight icon initially
-
-        SetNewWanderTarget();
+        if (!agent.isOnNavMesh)
+{
+        NavMeshHit hit;
+        if (NavMesh.SamplePosition(transform.position, out hit, 2f, NavMesh.AllAreas))
+            agent.Warp(hit.position);
+        else
+            Debug.LogWarning($"{name} could not find NavMesh and will be disabled.", this);
+    }
     }
 
 
@@ -68,7 +76,9 @@ public class EnemyMovement : MonoBehaviour
 
             // Check if the position is valid on the NavMesh
             if (NavMesh.SamplePosition(randomDirection, out NavMeshHit hit, 2.0f, NavMesh.AllAreas))
+            {
                 return hit.position;
+            }
         }
         return Vector3.zero; 
     }
@@ -76,10 +86,11 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
+        
         float distanceToPlayer = Vector3.Distance(target.transform.position, transform.position);
 
-        if (distanceToPlayer < chaseRange)
-        {
+        if (!isOnCooldown && distanceToPlayer < chaseRange)
+        {   
             agent.speed = chaseSpeed;
             fightIcon.enabled = true;
             agent.SetDestination(target.transform.position);
@@ -87,18 +98,17 @@ public class EnemyMovement : MonoBehaviour
 
             if (playerCaught)
             {
+                isOnCooldown = true;
                 enemy.TakeDamageHearts();
-                //return to another position
+                StartCoroutine(ChaseCooldown());
 
                 if (player.heartIcons.Count <= 0)
                 {
-
-                    //Quit();
+                    //change to the game over scene!
                 }
             }
         }
         
-
         else
         {
             //if not the enemy is not chasing the player anymore it will wander around
@@ -118,13 +128,22 @@ public class EnemyMovement : MonoBehaviour
 
 
 
+    IEnumerator ChaseCooldown()
+    {
+        fightIcon.enabled = false; // Hide the fight icon after cooldown
+        yield return new WaitForSeconds(chaseCooldownDuration);
+        isOnCooldown = false;
+        playerCaught = false;
+    }
+
     void OnMouseDown()
     {
         float distanceToPlayer = Vector3.Distance(target.transform.position, transform.position);
-        if (distanceToPlayer < chaseRange)
+        if (!isOnCooldown && distanceToPlayer < chaseRange)
         {
             Debug.Log("Enemy clicked! Player is within chase range.");
-            PotionEffects.instance.PotionOnEnemy();
+            //call on potionon enemy script
+            effects.PotionOnEnemy();
         }
     }
    

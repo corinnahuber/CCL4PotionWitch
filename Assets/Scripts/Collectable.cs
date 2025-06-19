@@ -10,28 +10,23 @@ public class Collectible : MonoBehaviour
     ItemData itemData; // Reference to the item data scriptable object 
 
     [SerializeField]
-    float respawnTime = 15f; // 600f 10 minutes in seconds
+    int respawnTime = 10; // Time in seconds before the item respawns
 
     [SerializeField]
     bool playerInRange = false;
 
-    IEnumerator RespawnAfterDelay()
-    {
-        yield return new WaitForSeconds(respawnTime);
-        gameObject.SetActive(true); // show the object again
-    }
 
-
-     void Update()
+    void Update()
     {
-        if (playerInRange && Input.GetKeyDown(KeyCode.E) || playerInRange && Input.GetMouseButtonDown(0))
+
+        if (playerInRange && Input.GetKey(KeyCode.E) || playerInRange && Input.GetMouseButtonDown(0))
         {
             Debug.Log($"key pressed: {Input.inputString}");
             bool added = Inventory.instance.AddItem(itemData);
             if (added)
             {
-                gameObject.SetActive(false); // Only hide if it was added
-                                             //StartCoroutine(RespawnAfterDelay());
+                gameObject.SetActive(false); 
+                //StartCoroutine(RespawnAfterDelay());
 
             }
             else
@@ -39,7 +34,7 @@ public class Collectible : MonoBehaviour
                 Debug.Log("Inventory full for this item. Cannot collect.");
             }
         }
-}
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -56,6 +51,14 @@ public class Collectible : MonoBehaviour
             playerInRange = false;
         }
     }
+    
+
+    IEnumerator RespawnAfterDelay()
+    {
+        yield return new WaitForSeconds(respawnTime);
+        gameObject.SetActive(true); 
+    }
+
 }
 
 

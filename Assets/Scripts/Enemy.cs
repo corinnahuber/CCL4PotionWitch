@@ -28,6 +28,8 @@ public class Enemy : MonoBehaviour
         if (player.heartIcons.Count > 0)
         {
             int lastIndex = player.heartIcons.Count - 1;
+            // Remove the last heart icon from the player's heart icons list
+            player.heartIcons[lastIndex].enabled = false;
             player.heartIcons.RemoveAt(lastIndex);
         }
 
