@@ -1,13 +1,15 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
 
     public List<Image> heartIcons = new List<Image>();
+    public List<Image> allHeartIcons = new List<Image>();
+
+    public static PotionEffects effects;
     public float movementPerSecond = 4f;
     public float rotationSpeed = 80f;
     public float zoomSpeed = 20f;
@@ -17,10 +19,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float minZoom = 3f;
     [SerializeField] float maxZoom = 16f;
 
-    [SerializeField] private InputActionReference moveAction;
-    [SerializeField] private InputActionReference cameraMovement;
 
- 
 
     void Update()
     {
@@ -43,6 +42,13 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
         }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            transform.position += Vector3.up * Time.deltaTime * movementPerSecond;
+        }
+
+
 
         float scroll = Input.GetAxis("Mouse ScrollWheel");
         if (scroll != 0f)
@@ -68,7 +74,17 @@ public class PlayerMovement : MonoBehaviour
             // Rotate the camera around the player but not the player around the camera
             mainCamera.transform.RotateAround(transform.position, transform.up, -rotationSpeed * Time.deltaTime);
         }
-        
+
     }
+
+
+    void OnMouseDown()
+    {
+        effects.PotionOnPlayer();
+    }
+    
 }
 
+
+
+ 
