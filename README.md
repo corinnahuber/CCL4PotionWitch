@@ -104,6 +104,10 @@ Their movement and attack patterns will be polished later to align with the rest
   8. Three different kinds of Pine Trees
   9. Pumpkin
   10. Well
+  11. Crystal Ball
+  12. Pencil
+  13. Cup
+  14. Small Desk Storage
 
 - Game Audio
   1. Pickup Sound
