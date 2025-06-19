@@ -176,7 +176,7 @@ STILL MISSING
   <img src="https://github.com/user-attachments/assets/8170665a-20b2-4471-ae83-ab120d051373" alt="PotionBottleHeal" width="100">
   <img src="https://github.com/user-attachments/assets/d6c675a5-96ef-429b-b0b3-2c4f078fe6a2" alt="PotionBottleDamage" width="100">
   <img src="https://github.com/user-attachments/assets/c043cb99-8edc-46bd-9715-feddc8b0ec6b" alt="PotionBottleBlast" width="100">
-  <img src="https://github.com/user-attachments/assets/b7775062-e935-49ba-944e-b762cc086325" alt="PotionBottleStun" width=100">
+  <img src="https://github.com/user-attachments/assets/b7775062-e935-49ba-944e-b762cc086325" alt="PotionBottleStun" width="100">
   <img src="https://github.com/user-attachments/assets/75939c77-a305-49a2-83e6-5db7c4a40e10" alt="PotionBottleSwift" width="100">
 </p>
 
