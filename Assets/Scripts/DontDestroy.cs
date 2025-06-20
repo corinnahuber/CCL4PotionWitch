@@ -19,6 +19,5 @@ public class DontDestroyOnLoad : MonoBehaviour
         {
             Destroy(gameObject); // Destroy this GameObject if another instance already exists
         }
-
     }
 }
