@@ -1,0 +1,10 @@
+@startuml
+class InventoryFieldUI {
+    + SetSlot(item:ItemData, quantity:int, index:int) : void
+    + ClearSlot() : void
+}
+MonoBehaviour <|-- InventoryFieldUI
+InventoryFieldUI --> "icon" Image
+InventoryFieldUI --> "countText" TextMeshProUGUI
+InventoryFieldUI --> "currentItem" ItemData
+@enduml

@@ -1,0 +1,54 @@
+@startuml
+class "@ExampleActions" <<partial>> {
+    + @ExampleActions()
+    + Dispose() : void
+    + Contains(action:InputAction) : bool
+    + GetEnumerator() : IEnumerator<InputAction>
+    + Enable() : void
+    + Disable() : void
+    + FindAction(actionNameOrId:string, throwIfNotFound:bool) : InputAction
+    + FindBinding(bindingMask:InputBinding, action:InputAction) : int
+}
+class "ReadOnlyArray`1"<T> {
+}
+class "IEnumerable`1"<T> {
+}
+struct GameplayActions {
+    + GameplayActions(wrapper:@ExampleActions)
+    + Get() : InputActionMap
+    + Enable() : void
+    + Disable() : void
+    + enabled : bool <<get>>
+    + SetCallbacks(instance:IGameplayActions) : void
+}
+struct MenusActions {
+    + MenusActions(wrapper:@ExampleActions)
+    + Get() : InputActionMap
+    + Enable() : void
+    + Disable() : void
+    + enabled : bool <<get>>
+    + SetCallbacks(instance:IMenusActions) : void
+}
+interface IGameplayActions {
+}
+interface IMenusActions {
+}
+IInputActionCollection2 <|-- "@ExampleActions"
+IDisposable <|-- "@ExampleActions"
+"@ExampleActions" --> "asset" InputActionAsset
+"@ExampleActions" --> "bindingMask" InputBinding
+"@ExampleActions" --> "devices<InputDevice>" "ReadOnlyArray`1"
+"@ExampleActions" --> "controlSchemes<InputControlScheme>" "ReadOnlyArray`1"
+"@ExampleActions" --> "bindings<InputBinding>" "IEnumerable`1"
+"@ExampleActions" --> "@gameplay" GameplayActions
+"@ExampleActions" --> "@menus" MenusActions
+"@ExampleActions" +-- GameplayActions
+GameplayActions --> "@move" InputAction
+GameplayActions --> "@jump" InputAction
+GameplayActions --> "@crouch" InputAction
+GameplayActions --> "@use" InputAction
+"@ExampleActions" +-- MenusActions
+MenusActions --> "@Newaction" InputAction
+"@ExampleActions" +-- IGameplayActions
+"@ExampleActions" +-- IMenusActions
+@enduml

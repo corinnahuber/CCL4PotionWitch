@@ -1,0 +1,10 @@
+@startuml
+class Inventory {
+    + AddItem(item:ItemData) : bool
+}
+class "List`1"<T> {
+}
+MonoBehaviour <|-- Inventory
+Inventory o-> "instance" Inventory
+Inventory o-> "inventoryItems<InventorySlot>" "List`1"
+@enduml

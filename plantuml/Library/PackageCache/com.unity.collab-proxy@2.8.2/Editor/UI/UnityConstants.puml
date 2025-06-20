@@ -1,0 +1,17 @@
+@startuml
+class UnityConstants <<static>> {
+    + <<const>> PLUGIN_DELAYED_INITIALIZE_INTERVAL : double = 0.25
+}
+class ChangesetsColumns <<static>> {
+}
+class BranchesColumns <<static>> {
+}
+class LocksColumns <<static>> {
+}
+class ShelvesColumns <<static>> {
+}
+UnityConstants +-- ChangesetsColumns
+UnityConstants +-- BranchesColumns
+UnityConstants +-- LocksColumns
+UnityConstants +-- ShelvesColumns
+@enduml

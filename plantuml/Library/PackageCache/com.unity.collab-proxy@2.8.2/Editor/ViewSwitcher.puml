@@ -1,0 +1,28 @@
+@startuml
+class ViewSwitcherState {
+}
+interface IShowChangesetInView {
+}
+interface IShowShelveInView {
+}
+class ViewSwitcher {
+}
+enum SelectedTab {
+    None= 0,
+    PendingChanges= 1,
+    IncomingChanges= 2,
+    Changesets= 3,
+    Shelves= 4,
+    Branches= 5,
+    Locks= 6,
+    Merge= 7,
+    History= 8,
+}
+IViewSwitcher <|-- ViewSwitcher
+IShowChangesetInView <|-- ViewSwitcher
+IShowShelveInView <|-- ViewSwitcher
+IMergeViewLauncher <|-- ViewSwitcher
+IGluonViewSwitcher <|-- ViewSwitcher
+IHistoryViewLauncher <|-- ViewSwitcher
+ViewSwitcher +-- SelectedTab
+@enduml

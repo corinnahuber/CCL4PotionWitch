@@ -1,0 +1,7 @@
+@startuml
+class BookToggle {
+    + isOpen : bool = false
+}
+MonoBehaviour <|-- BookToggle
+BookToggle o-> "bookToggleInstance" BookToggle
+@enduml

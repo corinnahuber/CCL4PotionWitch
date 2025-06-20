@@ -1,0 +1,5 @@
+@startuml
+class Collectible {
+}
+MonoBehaviour <|-- Collectible
+@enduml

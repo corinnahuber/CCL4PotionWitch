@@ -1,0 +1,38 @@
+@startuml
+class "@SimpleActions" <<partial>> {
+    + @SimpleActions()
+    + Dispose() : void
+    + Contains(action:InputAction) : bool
+    + GetEnumerator() : IEnumerator<InputAction>
+    + Enable() : void
+    + Disable() : void
+    + FindAction(actionNameOrId:string, throwIfNotFound:bool) : InputAction
+    + FindBinding(bindingMask:InputBinding, action:InputAction) : int
+}
+class "ReadOnlyArray`1"<T> {
+}
+class "IEnumerable`1"<T> {
+}
+struct GameplayActions {
+    + GameplayActions(wrapper:@SimpleActions)
+    + Get() : InputActionMap
+    + Enable() : void
+    + Disable() : void
+    + enabled : bool <<get>>
+    + SetCallbacks(instance:IGameplayActions) : void
+}
+interface IGameplayActions {
+}
+IInputActionCollection2 <|-- "@SimpleActions"
+IDisposable <|-- "@SimpleActions"
+"@SimpleActions" --> "asset" InputActionAsset
+"@SimpleActions" --> "bindingMask" InputBinding
+"@SimpleActions" --> "devices<InputDevice>" "ReadOnlyArray`1"
+"@SimpleActions" --> "controlSchemes<InputControlScheme>" "ReadOnlyArray`1"
+"@SimpleActions" --> "bindings<InputBinding>" "IEnumerable`1"
+"@SimpleActions" --> "@gameplay" GameplayActions
+"@SimpleActions" +-- GameplayActions
+GameplayActions --> "@move" InputAction
+GameplayActions --> "@jump" InputAction
+"@SimpleActions" +-- IGameplayActions
+@enduml
