@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,13 +21,18 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float minZoom = 3f;
     [SerializeField] float maxZoom = 16f;
     [SerializeField] LayerMask groundLayer;
-    [SerializeField] float groundCheckDistance = 0.1f;
+    //[SerializeField] float groundCheckDistance = 0.1f;
+
+    [Header("Jump/BoxCast Settings")]
+    [SerializeField] private GameObject playerGround; // Assign in Inspector
+    //[SerializeField] private float groundBoxCastDistance = 0.2f;
 
     private bool isJumping = false;
     private bool isGrounded = false;
 
 
     private Rigidbody rb;
+    private BoxCollider groundBoxCollider;
 
     void Awake()
     {
@@ -35,11 +41,33 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.LogError("Rigidbody component missing from player!");
         }
+        if (playerGround != null)
+        {
+            groundBoxCollider = playerGround.GetComponent<BoxCollider>();
+        }
     }
 
     void Update()
     {
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, groundCheckDistance, groundLayer);
+        // Use BoxCast from PlayerGround for ground detection
+        isGrounded = false;
+        if (playerGround != null && groundBoxCollider != null)
+        {
+            Vector3 boxCenter = playerGround.transform.position;
+            Quaternion boxRotation = playerGround.transform.rotation;
+            Vector3 boxHalfExtents = groundBoxCollider.size * 0.5f;
+
+            isGrounded = Physics.CheckBox(boxCenter, boxHalfExtents, boxRotation, groundLayer);
+            Debug.DrawLine(boxCenter, boxCenter + Vector3.down * 0.2f, isGrounded ? Color.green : Color.red);
+        }
+
+        // Reset jump state if landed
+        if (isGrounded && isJumping && rb.velocity.y <= 0.01f)
+        {
+            isJumping = false;
+            animator.SetBool("Jumping", false);
+        }
+
         bool isWalking = false;
 
         if (Input.GetKey(KeyCode.W))
@@ -55,22 +83,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
             transform.Rotate(0, -rotationSpeed * Time.deltaTime, 0);
+            
         if (Input.GetKey(KeyCode.D))
             transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
 
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded && !isJumping)
         {
-            isJumping = true;
-            animator.SetBool("Jumping", true);
-            // Add upward force for jump if you want physics jump:
-            rb.AddForce(Vector3.up * 5f, ForceMode.Impulse);
-        }
-
-        if (isJumping && isGrounded)
-        {
-            isJumping = false;
-            animator.SetBool("Jumping", false);
+            StartCoroutine(JumpControlFlow());
         }
 
         animator.SetBool("Walking", isWalking);
@@ -107,30 +127,28 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    private IEnumerator JumpControlFlow()
+    {
+        rb.AddForce(Vector3.up * 5f, ForceMode.Impulse); // Adjust force as needed
+        isJumping = true;
+        animator.SetBool("Jumping", true);
+
+        // Wait until player leaves the ground
+        while (isGrounded)
+            yield return null;
+        // Wait until player lands again
+        while (!isGrounded)
+            yield return null;
+
+        isJumping = false;
+        animator.SetBool("Jumping", false);
+    }
 
     void OnMouseDown()
     {
         effects.PotionOnPlayer();
     }
-    
-    
-     private void OnCollisionEnter(Collision collision)
-    {
-        if (((1 << collision.gameObject.layer) & groundLayer) != 0)
-        {
-            isGrounded = true;
-            isJumping = false;
-            animator.SetBool("Jumping", false);
-        }
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        if (((1 << collision.gameObject.layer) & groundLayer) != 0)
-        {
-            isGrounded = false;
-        }
-    }
+        
 }
 
 
