@@ -29,8 +29,16 @@ public class BookUI : MonoBehaviour
 
     void Awake()
     {
-        bookInstance = this;
-        UpdatePotionDisplay();
+        if (bookInstance == null)
+        {
+            bookInstance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (bookInstance != this)
+        {
+            Destroy(gameObject); // Prevent duplicate
+            return;
+        }
     }
 
 

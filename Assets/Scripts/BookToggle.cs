@@ -11,9 +11,25 @@ public class BookToggle : MonoBehaviour
     private GameObject bookUI;
     public bool isOpen = false;
 
+
+    void Awake()
+    {
+        if (bookToggleInstance == null)
+        {
+            bookToggleInstance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (bookToggleInstance != this)
+        {
+            Destroy(gameObject); // Prevent duplicate
+            return;
+        }
+
+
+    }
+
     private void Start()
     {
-        bookToggleInstance = this;
         if (bookUI != null)
         {
             bookUI.SetActive(isOpen); // Ensure the book UI is initially hidden

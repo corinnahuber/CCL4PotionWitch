@@ -2,18 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.AI.Navigation;
 using Unity.VisualScripting;
-using UnityEditor.Rendering;
 using UnityEngine.AI;
 using UnityEngine.UI;
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
+using System;
 using UnityEngine;
-
 
 public class EnemyMovement : MonoBehaviour
 {
-
+    public Animator animator; 
     public static PotionEffects effects; 
     public PlayerMovement player; // Reference to the PlayerMovement script
     public Enemy enemy; // Reference to the Enemy script
@@ -27,8 +23,7 @@ public class EnemyMovement : MonoBehaviour
     private Image fightIcon;
 
     [SerializeField]
-    Transform centerPoint; //CHANGE this later when we have a full world!!
-
+    Transform centerPoint; 
     private float normalSpeed;
     private float chaseSpeed = 6f;
     private float wanderTimer = 0f;
@@ -59,8 +54,10 @@ public class EnemyMovement : MonoBehaviour
         NavMeshHit hit;
         if (NavMesh.SamplePosition(transform.position, out hit, 2f, NavMesh.AllAreas))
             agent.Warp(hit.position);
+            
+            
         else
-            Debug.LogWarning($"{name} could not find NavMesh and will be disabled.", this);
+                Debug.LogWarning($"{name} could not find NavMesh and will be disabled.", this);
     }
     }
 
@@ -71,12 +68,13 @@ public class EnemyMovement : MonoBehaviour
         for (int i = 0; i < 30; i++) // Try up to 30 times
         {
             // Generate a random position within the specified range
-            Vector3 randomDirection = Random.insideUnitSphere * range;
+            Vector3 randomDirection = UnityEngine.Random.insideUnitSphere * range;
             randomDirection += center.position;
 
             // Check if the position is valid on the NavMesh
             if (NavMesh.SamplePosition(randomDirection, out NavMeshHit hit, 2.0f, NavMesh.AllAreas))
             {
+                animator.SetBool("Hover", true);
                 return hit.position;
             }
         }
@@ -86,11 +84,12 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        
+
         float distanceToPlayer = Vector3.Distance(target.transform.position, transform.position);
 
+
         if (!isOnCooldown && distanceToPlayer < chaseRange)
-        {   
+        {
             agent.speed = chaseSpeed;
             fightIcon.enabled = true;
             agent.SetDestination(target.transform.position);
@@ -104,11 +103,14 @@ public class EnemyMovement : MonoBehaviour
 
                 if (player.heartIcons.Count <= 0)
                 {
-                    //change to the game over scene!
+
+                    WorldSceneManager.Instance.GameOverScene();
                 }
+
             }
+
         }
-        
+
         else
         {
             //if not the enemy is not chasing the player anymore it will wander around
@@ -124,9 +126,18 @@ public class EnemyMovement : MonoBehaviour
             }
 
         }
+
+        YouWin(); // Check if all enemies are defeated
     }
 
 
+    void YouWin()
+    {
+        if (enemy.enemies.Length == 0) // Check if all enemies are defeated
+        {
+            WorldSceneManager.Instance.WinGame(); // Load the game scene or victory scene
+        }
+    }
 
     IEnumerator ChaseCooldown()
     {
@@ -178,15 +189,6 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-
-    public void Quit()
-{
-    #if UNITY_EDITOR
-        EditorApplication.isPlaying = false;
-    #else
-        Application.Quit();
-    #endif
-    }
 }
 
 

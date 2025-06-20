@@ -12,5 +12,6 @@ public class WitchHouseTrigger : MonoBehaviour
     public void OpenDoor()
     {
         animator.SetTrigger("OpenDoor");
+    
     }
 }
