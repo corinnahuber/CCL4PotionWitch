@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{32ADFBD4-31CE-4FE1-A72C-68AE27B0A97F}" SchemaVersion="123">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{32ADFBD4-31CE-4FE1-A72C-68AE27B0A97F}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="MainMenu_SoundBank" ID="{3150DE0D-0F0A-4F3C-8B61-8CA7B0482BD8}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Stop_MainMenu" ID="{DE3EFB7C-77C5-41C5-95ED-126FA3945611}" WorkUnitID="{79C89E29-54B4-401E-BD66-FB56D093E24C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_MainMenu" ID="{0E61AD88-D744-4D91-87A6-67B132F5931C}" WorkUnitID="{79C89E29-54B4-401E-BD66-FB56D093E24C}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="PickUp_SoundBank" ID="{8B6AD147-ED50-4337-AA35-6DA2709436A1}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_PickUp" ID="{D738F5CE-DCF5-4856-8861-52333A1C0B68}" WorkUnitID="{79C89E29-54B4-401E-BD66-FB56D093E24C}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="PlayerAttacked_SoundBank" ID="{DB3591F1-EC5D-4B47-9919-7E74E9D38956}">
+					<ObjectInclusionList/>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Forest_SoundBank" ID="{8FF48C38-8868-4BB5-8E48-86F7B8BB278C}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Forest" ID="{7AA069FE-94A9-443C-88EB-3283ADC47DAD}" WorkUnitID="{79C89E29-54B4-401E-BD66-FB56D093E24C}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="GhostIdle_SoundBank" ID="{F1AE208A-708C-439D-803D-387B22A40182}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_GhostIdle" ID="{6EDA318D-EFDF-406E-95D3-B6630D94AEBC}" WorkUnitID="{79C89E29-54B4-401E-BD66-FB56D093E24C}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Lake_SoundBank" ID="{D6AD03CF-1201-4759-98C0-48FEE7C86B6F}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Lake" ID="{32765313-D2F1-4091-AA63-DF7142526573}" WorkUnitID="{79C89E29-54B4-401E-BD66-FB56D093E24C}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Graveyard_SoundBank" ID="{3EA567F6-FBF8-4EAC-ADAF-3208065F4D20}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Graveyard" ID="{C6B7663B-5F15-4FFF-B3DA-E7E966426A67}" WorkUnitID="{79C89E29-54B4-401E-BD66-FB56D093E24C}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="BookFlip_SoundBank" ID="{D4F0F03A-F66A-4388-B774-465A82770358}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_BookFlip" ID="{BE392177-C4F6-452A-AD22-748C8220A0F7}" WorkUnitID="{79C89E29-54B4-401E-BD66-FB56D093E24C}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="GhostAttacked_SoundBank" ID="{1FFF9E10-F4C4-4721-ADA2-37D209458FD7}">
+					<ObjectInclusionList/>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Cave_SoundBank" ID="{02A41775-81B1-4504-A3D2-A6991DBC9028}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Cave" ID="{F08625EA-1AB2-49B2-BAF1-196833E48E5A}" WorkUnitID="{79C89E29-54B4-401E-BD66-FB56D093E24C}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Cauldron_SoundBank" ID="{A0FC2016-5D29-4F50-9E65-17386AD854AB}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Cauldron" ID="{0CD2C888-8745-4C16-BD39-7644E2191D8F}" WorkUnitID="{79C89E29-54B4-401E-BD66-FB56D093E24C}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="FootstepsInside_SoundBank" ID="{A1DB264A-639D-4B10-9986-CDE5BFBA889B}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_FootstepsInside" ID="{8C2E9C75-7E77-4981-9BCA-C23832F6BB53}" WorkUnitID="{79C89E29-54B4-401E-BD66-FB56D093E24C}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="FootstepsOutside_SoundBank" ID="{4B5CD805-4400-429E-87FF-CB8D92E0F759}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_FootstepsOutside" ID="{43DB3043-D875-469D-ADC7-F46A9E13E5A4}" WorkUnitID="{79C89E29-54B4-401E-BD66-FB56D093E24C}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

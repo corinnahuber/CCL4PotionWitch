@@ -1,0 +1,36 @@
+{
+ "ProjectInfo": {
+  "Project": {
+   "Name": "CCL4PotionWitch_WwiseProject",
+   "GUID": "{6D280D5E-49D1-4C1D-909C-C5582AC35FC1}",
+   "Generator": "2024.1.5.8803"
+  },
+  "CacheRoot": "../../../../CCL4PotionWitch_WwiseProject/.cache",
+  "Platforms": [
+   {
+    "Name": "Mac",
+    "GUID": "{A5470FCE-8266-42D6-AECD-2A631C455402}",
+    "BasePlatform": "Mac",
+    "BasePlatformGUID": "{9C6217D5-DD11-4795-87C1-6CE02853C540}",
+    "Path": "../../../../CCL4PotionWitch_WwiseProject/GeneratedSoundBanks/Mac"
+   },
+   {
+    "Name": "Windows",
+    "GUID": "{4D130AE8-CFD0-42E2-9F2E-C247EC1ACFDE}",
+    "BasePlatform": "Windows",
+    "BasePlatformGUID": "{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}",
+    "Path": "../../../../CCL4PotionWitch_WwiseProject/GeneratedSoundBanks/Windows"
+   }
+  ],
+  "Languages": [
+   {
+    "Name": "English(US)",
+    "Id": "684519430",
+    "GUID": "{0D149F7D-7BA7-471E-8026-54E452767717}",
+    "Default": "true",
+    "UseAsStandIn": "true"
+   }
+  ],
+  "FileHash": "{551784C5-89B5-A796-DB77-A2849CFB0C8D}"
+ }
+}

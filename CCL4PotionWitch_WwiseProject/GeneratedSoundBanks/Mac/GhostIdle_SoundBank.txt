@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3011067769	Play_GhostIdle			\Default Work Unit\Play_GhostIdle	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	158915110	GhostIdle	C:\Users\user\Desktop\ccl\CCL4PotionWitch\CCL4PotionWitch_WwiseProject\.cache\4A\{4AC0CD94-5D0C-EB91-B303-9D673604FC41}.wem		\Actor-Mixer Hierarchy\Default Work Unit\GhostIdle		1884364
+

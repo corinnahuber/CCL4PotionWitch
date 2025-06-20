@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3602995889	Play_Cave			\Default Work Unit\Play_Cave	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	363447310	Cave	C:\Users\user\Desktop\ccl\CCL4PotionWitch\CCL4PotionWitch_WwiseProject\.cache\DC\{DC3D9CAC-9937-BC74-C2A3-FE1750D97246}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cave		1315680
+

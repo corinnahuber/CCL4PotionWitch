@@ -1,0 +1,46 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3831665202",
+    "Type": "User",
+    "GUID": "{3EA567F6-FBF8-4EAC-ADAF-3208065F4D20}",
+    "Language": "SFX",
+    "Hash": "{270E1309-2E18-0D99-07F5-9CC001748F5C}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Graveyard_SoundBank",
+    "ShortName": "Graveyard_SoundBank",
+    "Path": "Graveyard_SoundBank.bnk",
+    "Media": [
+     {
+      "Id": "896981600",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Creepy Wind [Sound Effect] [Perfect Cut].wav",
+      "CachePath": "B9/{B970DB31-9F55-BDE5-6FF5-27DF3D9B7CFB}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "315336149",
+      "Name": "Play_Graveyard",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Graveyard",
+      "GUID": "{C6B7663B-5F15-4FFF-B3DA-E7E966426A67}",
+      "MaxAttenuation": "10",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "896981600"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{32082596-66BF-A771-E9E0-6E80F3E160B4}"
+ }
+}

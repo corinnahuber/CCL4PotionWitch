@@ -1,0 +1,46 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3772148165",
+    "Type": "User",
+    "GUID": "{A0FC2016-5D29-4F50-9E65-17386AD854AB}",
+    "Language": "SFX",
+    "Hash": "{46BCD2F1-0D7A-69F6-99B2-E75D10C3E27F}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Cauldron_SoundBank",
+    "ShortName": "Cauldron_SoundBank",
+    "Path": "Cauldron_SoundBank.bnk",
+    "Media": [
+     {
+      "Id": "872860621",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "591151__ultraaxvii__water-bubbling.wav",
+      "CachePath": "11/{111F6D97-ECB2-85F6-7241-378FBECB648C}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3212638512",
+      "Name": "Play_Cauldron",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Cauldron",
+      "GUID": "{0CD2C888-8745-4C16-BD39-7644E2191D8F}",
+      "MaxAttenuation": "30",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "872860621"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{89238C48-E148-0304-ACA5-C140D0CBFC09}"
+ }
+}

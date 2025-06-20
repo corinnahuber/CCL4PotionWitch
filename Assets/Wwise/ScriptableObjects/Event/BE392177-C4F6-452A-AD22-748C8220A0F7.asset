@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff444a2a1dd2de744ad05be239ec6073, type: 3}
+  m_Name: BE392177-C4F6-452A-AD22-748C8220A0F7
+  m_EditorClassIdentifier: 
+  objectName: Play_BookFlip
+  id: 2136059192
+  guid: BE392177-C4F6-452A-AD22-748C8220A0F7
+  IsInUserDefinedSoundBank: 1

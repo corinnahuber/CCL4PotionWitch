@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2713974140	Play_FootstepsOutside			\Default Work Unit\Play_FootstepsOutside	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	436316303	FootstepsOut	C:\Users\user\Desktop\ccl\CCL4PotionWitch\CCL4PotionWitch_WwiseProject\.cache\87\{87FAAFC7-B684-75EB-669A-C968E57AC5F0}.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsOut		122800
+

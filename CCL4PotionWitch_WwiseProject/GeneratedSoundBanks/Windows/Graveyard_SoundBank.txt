@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	315336149	Play_Graveyard			\Default Work Unit\Play_Graveyard	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	896981600	Graveyard	C:\Users\user\Desktop\ccl\CCL4PotionWitch\CCL4PotionWitch_WwiseProject\.cache\B9\{B970DB31-9F55-BDE5-6FF5-27DF3D9B7CFB}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Graveyard		2530520
+

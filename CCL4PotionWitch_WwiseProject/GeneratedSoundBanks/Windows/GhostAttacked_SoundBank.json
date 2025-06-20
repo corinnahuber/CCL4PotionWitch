@@ -1,0 +1,21 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "894278887",
+    "Type": "User",
+    "GUID": "{1FFF9E10-F4C4-4721-ADA2-37D209458FD7}",
+    "Language": "SFX",
+    "Hash": "{240E2221-62AA-039F-99FF-8C0281B528F6}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\GhostAttacked_SoundBank",
+    "ShortName": "GhostAttacked_SoundBank",
+    "Path": "GhostAttacked_SoundBank.bnk"
+   }
+  ],
+  "FileHash": "{ED88E158-71A6-904C-5C48-B4593EE2D3E6}"
+ }
+}

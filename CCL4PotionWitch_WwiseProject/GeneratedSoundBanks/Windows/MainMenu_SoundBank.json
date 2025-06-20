@@ -1,0 +1,55 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3751373289",
+    "Type": "User",
+    "GUID": "{3150DE0D-0F0A-4F3C-8B61-8CA7B0482BD8}",
+    "Language": "SFX",
+    "Hash": "{E2A86BAF-5F83-30CE-E877-19FA4AEB057A}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\MainMenu_SoundBank",
+    "ShortName": "MainMenu_SoundBank",
+    "Path": "MainMenu_SoundBank.bnk",
+    "Media": [
+     {
+      "Id": "1012410909",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "mystery-music-loop-226835.wav",
+      "CachePath": "85/{855ED02E-6CD0-4B2C-F71D-B3B480574ACA}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3738780720",
+      "Name": "Play_MainMenu",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_MainMenu",
+      "GUID": "{0E61AD88-D744-4D91-87A6-67B132F5931C}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "1012410909"
+       }
+      ]
+     },
+     {
+      "Id": "890527358",
+      "Name": "Stop_MainMenu",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_MainMenu",
+      "GUID": "{DE3EFB7C-77C5-41C5-95ED-126FA3945611}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{E017A978-9010-7EB3-48AA-333E394FD7EA}"
+ }
+}

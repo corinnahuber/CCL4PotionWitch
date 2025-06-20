@@ -1,0 +1,45 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "4002332272",
+    "Type": "User",
+    "GUID": "{8FF48C38-8868-4BB5-8E48-86F7B8BB278C}",
+    "Language": "SFX",
+    "Hash": "{D1E2C53A-3CC8-BEE2-636B-666343F99E7B}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Forest_SoundBank",
+    "ShortName": "Forest_SoundBank",
+    "Path": "Forest_SoundBank.bnk",
+    "Media": [
+     {
+      "Id": "1009491360",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "forest.wav",
+      "CachePath": "E9/{E947B227-9650-E300-1965-403C950F814F}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "207755397",
+      "Name": "Play_Forest",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Forest",
+      "GUID": "{7AA069FE-94A9-443C-88EB-3283ADC47DAD}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "1009491360"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{F45CCFC6-06F3-C031-ECDC-1A6382928495}"
+ }
+}

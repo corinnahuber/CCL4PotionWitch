@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3860455926	Play_PickUp			\Default Work Unit\Play_PickUp	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	768053599	PickUp	C:\Users\user\Desktop\ccl\CCL4PotionWitch\CCL4PotionWitch_WwiseProject\.cache\49\{4913695B-D6BC-142A-9D42-8C310A30E1F8}.wem		\Actor-Mixer Hierarchy\Default Work Unit\PickUp		37768
+

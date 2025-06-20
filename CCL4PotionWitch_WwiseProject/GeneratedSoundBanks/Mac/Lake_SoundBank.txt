@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	40648359	Play_Lake			\Default Work Unit\Play_Lake	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	170214349	Lake	C:\Users\user\Desktop\ccl\CCL4PotionWitch\CCL4PotionWitch_WwiseProject\.cache\50\{508B2CB2-021E-D802-481B-095202F2298C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lake		1556196
+

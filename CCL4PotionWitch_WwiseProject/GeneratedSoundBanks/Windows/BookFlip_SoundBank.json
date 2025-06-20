@@ -1,0 +1,47 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3153541569",
+    "Type": "User",
+    "GUID": "{D4F0F03A-F66A-4388-B774-465A82770358}",
+    "Language": "SFX",
+    "Hash": "{6D8EDB92-6E83-B656-277B-B6F143EB1A2C}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\BookFlip_SoundBank",
+    "ShortName": "BookFlip_SoundBank",
+    "Path": "BookFlip_SoundBank.bnk",
+    "Media": [
+     {
+      "Id": "777739675",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "484964__spacejoe__quiet-page-turn-4.wav",
+      "CachePath": "F5/{F56633E0-27EE-1A72-BE48-1DCE2D9DCA62}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2136059192",
+      "Name": "Play_BookFlip",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_BookFlip",
+      "GUID": "{BE392177-C4F6-452A-AD22-748C8220A0F7}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.4063492",
+      "DurationMax": "0.4063492",
+      "MediaRefs": [
+       {
+        "Id": "777739675"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{2104BF44-6EE5-DDCB-0E47-A38A16642EF5}"
+ }
+}

@@ -1,0 +1,7 @@
+Event	ID	Name			Wwise Object Path	Notes
+	890527358	Stop_MainMenu			\Default Work Unit\Stop_MainMenu	
+	3738780720	Play_MainMenu			\Default Work Unit\Play_MainMenu	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	1012410909	MainMenu	C:\Users\user\Desktop\ccl\CCL4PotionWitch\CCL4PotionWitch_WwiseProject\.cache\85\{855ED02E-6CD0-4B2C-F71D-B3B480574ACA}.wem		\Actor-Mixer Hierarchy\Default Work Unit\MainMenu		4852320
+

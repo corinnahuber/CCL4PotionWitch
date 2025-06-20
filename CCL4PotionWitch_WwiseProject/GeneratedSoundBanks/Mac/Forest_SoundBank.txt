@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	207755397	Play_Forest			\Default Work Unit\Play_Forest	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	1009491360	Forest	C:\Users\user\Desktop\ccl\CCL4PotionWitch\CCL4PotionWitch_WwiseProject\.cache\E9\{E947B227-9650-E300-1965-403C950F814F}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Forest		1698144
+

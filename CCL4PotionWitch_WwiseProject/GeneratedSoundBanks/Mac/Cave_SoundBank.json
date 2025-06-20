@@ -1,0 +1,46 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "4106907856",
+    "Type": "User",
+    "GUID": "{02A41775-81B1-4504-A3D2-A6991DBC9028}",
+    "Language": "SFX",
+    "Hash": "{8E2BAD7B-5F3B-11C3-74FD-7E89539E527F}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Cave_SoundBank",
+    "ShortName": "Cave_SoundBank",
+    "Path": "Cave_SoundBank.bnk",
+    "Media": [
+     {
+      "Id": "363447310",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "cave-wind-10-76283.wav",
+      "CachePath": "DC/{DC3D9CAC-9937-BC74-C2A3-FE1750D97246}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3602995889",
+      "Name": "Play_Cave",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Cave",
+      "GUID": "{F08625EA-1AB2-49B2-BAF1-196833E48E5A}",
+      "MaxAttenuation": "10",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "363447310"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{E9E2E3B0-B03C-FE51-B24D-9D7FEE0EEB58}"
+ }
+}

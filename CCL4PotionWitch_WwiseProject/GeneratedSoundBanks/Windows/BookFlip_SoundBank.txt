@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2136059192	Play_BookFlip			\Default Work Unit\Play_BookFlip	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	777739675	PageFlip	C:\Users\user\Desktop\ccl\CCL4PotionWitch\CCL4PotionWitch_WwiseProject\.cache\F5\{F56633E0-27EE-1A72-BE48-1DCE2D9DCA62}.wem		\Actor-Mixer Hierarchy\Default Work Unit\PageFlip		71776
+

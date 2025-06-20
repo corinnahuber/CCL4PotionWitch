@@ -1,0 +1,46 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "1256153282",
+    "Type": "User",
+    "GUID": "{D6AD03CF-1201-4759-98C0-48FEE7C86B6F}",
+    "Language": "SFX",
+    "Hash": "{C79189CA-78E0-87D1-0D77-9FF64D923C00}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Lake_SoundBank",
+    "ShortName": "Lake_SoundBank",
+    "Path": "Lake_SoundBank.bnk",
+    "Media": [
+     {
+      "Id": "170214349",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "554870__leavidencedesign__nice-water-seamless-loop.wav",
+      "CachePath": "50/{508B2CB2-021E-D802-481B-095202F2298C}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "40648359",
+      "Name": "Play_Lake",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Lake",
+      "GUID": "{32765313-D2F1-4091-AA63-DF7142526573}",
+      "MaxAttenuation": "20",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "170214349"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{CB16D9FF-D9D3-7E47-8B2D-F32E2513B4CA}"
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "2179242980",
+    "Type": "User",
+    "GUID": "{A1DB264A-639D-4B10-9986-CDE5BFBA889B}",
+    "Language": "SFX",
+    "Hash": "{A04E6AAA-EAFD-F54F-56A9-2A17887623C1}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\FootstepsInside_SoundBank",
+    "ShortName": "FootstepsInside_SoundBank",
+    "Path": "FootstepsInside_SoundBank.bnk",
+    "Media": [
+     {
+      "Id": "435641053",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "footsteps wood.wav",
+      "CachePath": "76/{76934EE4-D1F4-D23C-E840-8BEA37A7D68C}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "4132445999",
+      "Name": "Play_FootstepsInside",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_FootstepsInside",
+      "GUID": "{8C2E9C75-7E77-4981-9BCA-C23832F6BB53}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "435641053"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{403FA89C-8AAA-2328-E44D-C8F214FE2C37}"
+ }
+}

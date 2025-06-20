@@ -1,0 +1,46 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "1084749322",
+    "Type": "User",
+    "GUID": "{F1AE208A-708C-439D-803D-387B22A40182}",
+    "Language": "SFX",
+    "Hash": "{3C34CCFB-992A-1991-5FE3-4713EDE5CB56}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\GhostIdle_SoundBank",
+    "ShortName": "GhostIdle_SoundBank",
+    "Path": "GhostIdle_SoundBank.bnk",
+    "Media": [
+     {
+      "Id": "158915110",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ghostidle.wav",
+      "CachePath": "4A/{4AC0CD94-5D0C-EB91-B303-9D673604FC41}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3011067769",
+      "Name": "Play_GhostIdle",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_GhostIdle",
+      "GUID": "{6EDA318D-EFDF-406E-95D3-B6630D94AEBC}",
+      "MaxAttenuation": "60",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "158915110"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{031382D7-A2C9-D36F-F3BC-B1DBFFCF1AF0}"
+ }
+}
