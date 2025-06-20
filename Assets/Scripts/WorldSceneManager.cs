@@ -1,23 +1,26 @@
 using System.Collections;
-using UnityEngine;
 using UnityEngine.SceneManagement;
-
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+using UnityEngine;
 
 public class WorldSceneManager : MonoBehaviour
 {
     public static WorldSceneManager Instance;
 
 
-     void Awake()
+    void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+
         }
         else
         {
-            Destroy(gameObject);   
+            Destroy(gameObject);
             return;
         }
     }
@@ -35,20 +38,41 @@ public class WorldSceneManager : MonoBehaviour
         {
             yield return null;
         }
-        // Force Unity to update lighting settings
         DynamicGI.UpdateEnvironment();
     }
 
 
-
-    public void MainMenu()
+    public void LoadScene(int sceneBuildIndex)
     {
-        SceneManager.LoadScene(2);
+        StartCoroutine(LoadSceneAsync(sceneBuildIndex));
     }
+
+    IEnumerator LoadSceneAsync(int sceneBuildIndex)
+    {
+        AsyncOperation op = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneBuildIndex);
+        while (!op.isDone)
+        {
+            yield return null;
+        }
+        DynamicGI.UpdateEnvironment();
+    }
+
 
     public void GameScene()
     {
+        LoadScene(2);
+    }
+
+    public void MainMenu()
+    {
+
         SceneManager.LoadScene(0);
+    }
+
+
+    public void WinGame()
+    {
+        SceneManager.LoadScene(3);
     }
 
     public void GameOverScene()
@@ -58,9 +82,10 @@ public class WorldSceneManager : MonoBehaviour
 
     public void ExitGame()
     {
-        Application.Quit();
+        #if UNITY_EDITOR
+            EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
+        }
     }
-
-
-
-}

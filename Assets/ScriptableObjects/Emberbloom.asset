@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Emberbloom
   m_EditorClassIdentifier: 
   itemName: Emberbloom
-  itemImage: {fileID: 21300000, guid: 8173026da2d496747b916cf9b22d9a7a, type: 3}
+  itemImage: {fileID: 21300000, guid: 95a0bf45012c9974c9970ce524467f8e, type: 3}
   itemMaxStack: 8

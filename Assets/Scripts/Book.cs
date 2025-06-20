@@ -17,8 +17,15 @@ public class Book : MonoBehaviour
     private void Awake()
     {
         if (bookInstance == null)
+        {
             bookInstance = this;
-        else Destroy(gameObject);
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (bookInstance != this)
+        {
+            Destroy(gameObject); // Prevent duplicate
+            return;
+        }
     }
 
 

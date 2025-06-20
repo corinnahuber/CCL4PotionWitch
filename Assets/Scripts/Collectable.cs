@@ -6,6 +6,7 @@ using UnityEngine;
 public class Collectible : MonoBehaviour
 {
 
+
     [SerializeField]
     ItemData itemData; // Reference to the item data scriptable object 
 

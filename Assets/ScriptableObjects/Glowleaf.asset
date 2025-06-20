@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Glowleaf
   m_EditorClassIdentifier: 
   itemName: Glowleaf
-  itemImage: {fileID: 21300000, guid: 24dac139f172e9d448ca1533382c024d, type: 3}
+  itemImage: {fileID: 21300000, guid: eb7511680edd64240a306c901edf578f, type: 3}
   itemMaxStack: 8

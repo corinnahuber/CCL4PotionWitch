@@ -33,37 +33,30 @@ public class SceneButtonHandler : MonoBehaviour
 
     public void ExitGame()
     {
-        //WorldSceneManager.Instance.ExitGame();
+        WorldSceneManager.Instance.ExitGame();
     }
 
     public void MainMenu()
     {
-        //WorldSceneManager.Instance.MainMenu();
+        WorldSceneManager.Instance.MainMenu();
     }
 
     public void RestartGame()
     {
-        //WorldSceneManager.Instance.GameScene();
+        WorldSceneManager.Instance.GameScene();
     }
 
      public void TogglePause()
-{
-    isPaused = !isPaused;
-    Debug.Log("Toggling pause, isPaused = " + isPaused);
-    
-    if (PauseMenuUI != null)
     {
-        PauseMenuUI.SetActive(isPaused);
-        Debug.Log("PauseMenuUI set active: " + isPaused);
-    }
-    else
-    {
-        Debug.LogWarning("PauseMenuUI is not assigned!");
-    }
+        isPaused = !isPaused;
+        
+        if (PauseMenuUI != null)
+        {
+            PauseMenuUI.SetActive(isPaused);
+        }
 
-    Time.timeScale = isPaused ? 0 : 1;
-    Debug.Log("Time.timeScale set to: " + Time.timeScale);
-}
+        Time.timeScale = isPaused ? 0 : 1;
+    }
 }
 
 
