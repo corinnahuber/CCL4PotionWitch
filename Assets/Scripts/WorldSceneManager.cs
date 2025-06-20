@@ -2,11 +2,13 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class WorldSceneManager : MonoBehaviour
 {
     public static WorldSceneManager Instance;
 
-    private void Awake()
+
+     void Awake()
     {
         if (Instance == null)
         {
@@ -15,9 +17,11 @@ public class WorldSceneManager : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(gameObject);   
+            return;
         }
     }
+
 
     public void LoadScene(string sceneName)
     {
@@ -34,4 +38,29 @@ public class WorldSceneManager : MonoBehaviour
         // Force Unity to update lighting settings
         DynamicGI.UpdateEnvironment();
     }
+
+
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+    public void GameScene()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void GameOverScene()
+    {
+        SceneManager.LoadScene(4);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+
+
 }

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.AI.Navigation;
 using Unity.VisualScripting;
-using UnityEditor.Rendering;
 using UnityEngine.AI;
 using UnityEngine.UI;
 #if UNITY_EDITOR
