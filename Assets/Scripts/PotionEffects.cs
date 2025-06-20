@@ -138,7 +138,6 @@ public class PotionEffects : MonoBehaviour
             {
                 PotionInventory.instance.RemovePotion(PotionSelected);
                 PotionsInventoryUI.instance.PotionInventoryUIUpdate();
-                //PotionsInventoryUI.instance.SelectedPotion(PotionsInventoryUI.instance.selectedIndex - 1); // Select the previous potion
                 used = false; // Reset the used flag
             }
         }

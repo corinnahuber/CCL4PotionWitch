@@ -80,12 +80,17 @@ public class WorldSceneManager : MonoBehaviour
         SceneManager.LoadScene(4);
     }
 
+
     public void ExitGame()
     {
-        #if UNITY_EDITOR
+    #if UNITY_EDITOR
             EditorApplication.isPlaying = false;
-        #else
+    #else
             Application.Quit();
-        #endif
-        }
-    }
+    #endif
+    }  
+    
+
+
+
+}

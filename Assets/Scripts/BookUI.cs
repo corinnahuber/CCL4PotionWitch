@@ -42,8 +42,6 @@ public class BookUI : MonoBehaviour
     }
 
 
-    //this method is called every frame to make sure the book is updated while its active not just when flipping pages!!
-    //will see if we can call it somewhere else instead of Update() to avoid performance issues, but for now it works
     void Update()
     {
         if (BookToggle.bookToggleInstance.isOpen)

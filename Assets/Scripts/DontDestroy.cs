@@ -12,12 +12,12 @@ public class DontDestroyOnLoad : MonoBehaviour
     {
         if (persistentObjects[objectIndex] == null)
         {
-            persistentObjects[objectIndex] = gameObject; // Store the reference to this GameObject
-            DontDestroyOnLoad(gameObject); // Prevent this GameObject from being destroyed when loading a new scene
+            persistentObjects[objectIndex] = gameObject; 
+            DontDestroyOnLoad(gameObject); 
         }
         else if (persistentObjects[objectIndex] != gameObject)
         {
-            Destroy(gameObject); // Destroy this GameObject if another instance already exists
+            Destroy(gameObject); 
         }
 
     }

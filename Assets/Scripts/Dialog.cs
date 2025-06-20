@@ -8,16 +8,16 @@ using Unity.VisualScripting;
 public class Dialog : MonoBehaviour
 {
     public Animator animator;
-    public PlayerMovement player; // Reference to the PlayerMovement script
+    public PlayerMovement player; 
     [SerializeField]
-    GameObject potionInventory; // Reference to the potion inventory item
+    GameObject potionInventory; 
     [SerializeField]
     TextMeshProUGUI dialogueText;
     [SerializeField]
-    GameObject dialogueCanvas; // UI panel at bottom of screen
+    GameObject dialogueCanvas; 
 
     [SerializeField]
-    public Button nextButton; // Button to show next line
+    public Button nextButton; 
 
     [SerializeField]
     [TextArea(3, 10)]
@@ -30,8 +30,8 @@ public class Dialog : MonoBehaviour
 
     void Start()
     {
-        dialogueCanvas.SetActive(false); // Hide the dialogue box initially
-        animator.SetBool("Talking", false); // Ensure talking animation is off
+        dialogueCanvas.SetActive(false); 
+        animator.SetBool("Talking", false); 
 
     }
 

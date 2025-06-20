@@ -30,34 +30,4 @@ public class InventoryToggle : MonoBehaviour
         }
     }
 }
-/*
-    private bool isOpen = false;
 
-    private void Start()
-    {
-        inventoryUI.SetActive(isOpen); 
-    
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.I)) // Change to your desired key for toggling the inventory
-
-        {
-            if (isOpen)
-            {
-                Debug.Log("Closing inventory");
-                inventoryUI.SetActive(false);
-                isOpen = false;
-            }
-            else
-            {
-                Debug.Log("Opening inventory");
-                inventoryUI.SetActive(true);
-                isOpen = true;
-            }
-
-        }
-    }
-}
-*/
