@@ -47,6 +47,8 @@ public class WorldSceneManager : MonoBehaviour
         StartCoroutine(LoadSceneAsync(sceneBuildIndex));
     }
 
+    
+
     IEnumerator LoadSceneAsync(int sceneBuildIndex)
     {
         AsyncOperation op = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneBuildIndex);

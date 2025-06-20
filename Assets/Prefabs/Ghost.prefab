@@ -1132,6 +1132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43bb54486682a144ac3bc9d0944ae48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   player: {fileID: 0}
   enemy: {fileID: 0}
   chaseRange: 10
@@ -1407,7 +1408,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9ff26ac21cb1df244808826c6c3eaee5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dd9eb160ba67eb145be6f4d79c9a6bb3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

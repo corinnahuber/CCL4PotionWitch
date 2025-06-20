@@ -1,6 +1,9 @@
 using UnityEngine;
 using System.Collections;
 
+
+
+
 public class DoorTrigger : MonoBehaviour
 {
     public string sceneToLoad;
