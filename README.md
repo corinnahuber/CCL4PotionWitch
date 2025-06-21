@@ -1,5 +1,7 @@
 <p align="center">
   <img src="https://github.com/user-attachments/assets/81575a37-8e73-48ed-b636-efc306fe902a" alt="WitchsBrewLogo">
+  <img src="https://github.com/user-attachments/assets/18ebdba0-e7b9-4110-9a96-54e9519de4f6" alt="WitchsBrew">
+
 </p>
 
 
