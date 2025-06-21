@@ -99,6 +99,7 @@ Each potion has a unique effect, essential for battling the ghosts.
 <br>
 Ghost health depletes based on the potion used (Burn = fast damage etc.). 
 Their movement and attack patterns will be polished later to align with the rest of the game visuals and logic.
+<br>
 
 ![image](https://github.com/user-attachments/assets/f6d642a0-3300-4ea4-8d5d-6f794bae8cf6)
 
@@ -234,14 +235,14 @@ STILL MISSING
 
 ## In-Game
 <p>
-  <img src="https://github.com/user-attachments/assets/69e400f8-7772-4f1a-bbff-bd8d80c1891a" alt="Scene01" width="300">
-  <img src="https://github.com/user-attachments/assets/96030ea4-5b3b-4eab-bfd0-19cc353084e3" alt="Scene02" width="300">
+  <img src="https://github.com/user-attachments/assets/69e400f8-7772-4f1a-bbff-bd8d80c1891a" alt="Scene01" width="400">
+  <img src="https://github.com/user-attachments/assets/96030ea4-5b3b-4eab-bfd0-19cc353084e3" alt="Scene02" width="400">
 </p>
 
 <p>
-  <img src="https://github.com/user-attachments/assets/5e1d64a7-f737-4b10-9dad-a85291a2f74c" alt="Scene03" width="300">
-  <img src="https://github.com/user-attachments/assets/46c749fe-6613-4d69-b2c0-cd1dbc05f0a2" alt="Scene04" width="300">
-  <img src="https://github.com/user-attachments/assets/5a37016b-7e1e-4637-a434-3a7a5dbbc2f1" alt="Scene05" width="300">
+  <img src="https://github.com/user-attachments/assets/5e1d64a7-f737-4b10-9dad-a85291a2f74c" alt="Scene03" width="400">
+  <img src="https://github.com/user-attachments/assets/46c749fe-6613-4d69-b2c0-cd1dbc05f0a2" alt="Scene04" width="400">
+  <img src="https://github.com/user-attachments/assets/5a37016b-7e1e-4637-a434-3a7a5dbbc2f1" alt="Scene05" width="400">
 </p>
 
 <br>
