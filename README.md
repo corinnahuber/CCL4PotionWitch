@@ -206,24 +206,24 @@ STILL MISSING
 
 <!-- Cauldron -->
 <p>
-  <img src="https://github.com/user-attachments/assets/dc1845d3-b384-4583-afbd-b3f28150be03" alt="Cauldron" width="100">
+  <img src="https://github.com/user-attachments/assets/dc1845d3-b384-4583-afbd-b3f28150be03" alt="Cauldron" width="150">
 </p>
 
 <!-- Witch House Interior -->
 <p>
-  <img src="https://github.com/user-attachments/assets/20b5bb8c-7ba1-41cb-bd8c-9302cba75b84" alt="WitchHouse01" width="100">
-  <img src="https://github.com/user-attachments/assets/b97e5bc7-2b7f-47e0-9eb5-c165bac3dcfa" alt="WitchHouse02" width="100">
+  <img src="https://github.com/user-attachments/assets/20b5bb8c-7ba1-41cb-bd8c-9302cba75b84" alt="WitchHouse01" width="200">
+  <img src="https://github.com/user-attachments/assets/b97e5bc7-2b7f-47e0-9eb5-c165bac3dcfa" alt="WitchHouse02" width="200">
 </p>
 
 <!-- Collectables -->
 <p>
-  <img src="https://github.com/user-attachments/assets/212206e8-10f7-445c-b1f1-f4f08ff8d366" alt="Collectables" width="100">
+  <img src="https://github.com/user-attachments/assets/212206e8-10f7-445c-b1f1-f4f08ff8d366" alt="Collectables" width="200">
 </p>
 
 <!-- Decorations -->
 <p>
-  <img src="https://github.com/user-attachments/assets/c76206cb-d0b8-431f-95f7-1d96df3a002b" alt="PineTrees" width="100">
-  <img src="https://github.com/user-attachments/assets/9fd67d20-511a-4181-b251-a5f3df982322" alt="Pumpkin" width="100">
+  <img src="https://github.com/user-attachments/assets/c76206cb-d0b8-431f-95f7-1d96df3a002b" alt="PineTrees" width="150">
+  <img src="https://github.com/user-attachments/assets/9fd67d20-511a-4181-b251-a5f3df982322" alt="Pumpkin" width="150">
 </p>
 
 
