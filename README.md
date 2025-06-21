@@ -1,7 +1,5 @@
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/81575a37-8e73-48ed-b636-efc306fe902a" alt="WitchsBrewLogo">
   <img src="https://github.com/user-attachments/assets/18ebdba0-e7b9-4110-9a96-54e9519de4f6" alt="WitchsBrew">
-
 </p>
 
 
@@ -228,6 +226,15 @@ STILL MISSING
   <img src="https://github.com/user-attachments/assets/9fd67d20-511a-4181-b251-a5f3df982322" alt="Pumpkin" width="150">
 </p>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/81575a37-8e73-48ed-b636-efc306fe902a" alt="WitchsBrewLogo" width="100">
+</p>
 
 
 
