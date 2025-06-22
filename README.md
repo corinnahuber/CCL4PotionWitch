@@ -128,6 +128,12 @@ Their movement and attack patterns will be polished later to align with the rest
   8. Three different kinds of Pine Trees
   9. Pumpkin
   10. Well
+  
+  - Animation
+    1. Main Character - Raven (Idle, Walk, Jump)
+    2. Side Character - Wisp (Idle, LookAround)
+    3. Ghost (Hover)
+    4. Cauldron (Bubbling)
 
 - Game Audio
   1. Pickup Sound
@@ -136,7 +142,7 @@ Their movement and attack patterns will be polished later to align with the rest
   4. Player getting attacked
   5. Different sounds for areas (cave, lake, graveyard,...)
   6. Ambient Sounds (wind, forest, main menu audio)
-  7. Ghost Sound
+  7. Ghost Sound (main sound and dying)
   8. Footsteps on grass and wood
 
 - Unity Coding
