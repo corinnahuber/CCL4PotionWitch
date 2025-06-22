@@ -223,6 +223,14 @@ Each potion and their effect on the player or the ghost is written in the Potion
 Ghosts are randomly placed around the world using setDestinantion on a navMesh and they roam around the place until they spot a player. If in the given range they start to chase us and the fighting icon appears- the time when we can fight the ghosts. When the icon is gone potion has no effect and cant be used.
 If hit by a ghost, ghost goes into cooldown to give us a chance to escape. Every time we are hit the update method checks if we are out of hearts and ends the game if we are dead.
 
+<br>
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/81575a37-8e73-48ed-b636-efc306fe902a" alt="WitchsBrewLogo" width="100">
+</p>
+
+<br>
+
 ### Achievements
 - Very proud of the characters we made, it was a long and hard process at times, especially the rigging and weight painting part for it to look good when animating, but we are really proud of the outcome
 - We tried to make as many assets as possible ourselves so the whole game would have a nice feel to it, we are very happy with how the world looks and feels like
@@ -247,9 +255,6 @@ If hit by a ghost, ghost goes into cooldown to give us a chance to escape. Every
 - Recording some of the audio elements would have been nice
 - Learned how things really work under the surface and understood the need for planning and structure early on
 - All in all we are proud of what we achieved in such a short amount of time, but there are definitely a lot of improvements we could have made if we had more time :)
-
-
-
 
 ## System Infrastructure
 ![ClassDiagram](https://github.com/user-attachments/assets/926b4e39-fdb8-4a14-94c6-d99f7624ed8c)
