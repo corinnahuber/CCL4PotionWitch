@@ -54,7 +54,9 @@ https://miro.com/app/board/uXjVINxA_V0=/?share_link_id=535119272679
 
 ### User guideline
 Connect Repository to Unity
+<br>
 either play the game directly in Unity (run Main Menu Scene)
+<br>
 or Build the project and play the built version
 
 ## Story
