@@ -121,13 +121,13 @@ Their movement and attack patterns will be polished later to align with the rest
      - Carpet
      - 2 Different Plants
      - Mirror
+     - Pencil
+     - Cup
+     - Crystal Ball
+     - Small Desk Storage
   8. Three different kinds of Pine Trees
   9. Pumpkin
   10. Well
-  11. Crystal Ball
-  12. Pencil
-  13. Cup
-  14. Small Desk Storage
 
 - Game Audio
   1. Pickup Sound
@@ -140,9 +140,17 @@ Their movement and attack patterns will be polished later to align with the rest
   8. Footsteps on grass and wood
 
 - Unity Coding
-  1.
-  2.
-  3.
+  1. Main Menu scene
+  2. Witch House
+  3. World
+  4. Game Win
+  5. Game Over
+  6. PotionButton
+  7. slot- Ingredient Field in inventory
+  8. IngBook - Book Ingredient Field
+  9. Ghost - enemy
+<br>
+  **UI**
 
 - C# & Theory of CG&A
   1.
