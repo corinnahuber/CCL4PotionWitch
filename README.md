@@ -129,11 +129,11 @@ Their movement and attack patterns will be polished later to align with the rest
   9. Pumpkin
   10. Well
   
-  - Animation
-    1. Main Character - Raven (Idle, Walk, Jump)
-    2. Side Character - Wisp (Idle, LookAround)
-    3. Ghost (Hover)
-    4. Cauldron (Bubbling)
+- Animation
+  1. Main Character - Raven (Idle, Walk, Jump)
+  2. Side Character - Wisp (Idle, LookAround)
+  3. Ghost (Hover)
+  4. Cauldron (Bubbling)
 
 - Game Audio
   1. Pickup Sound
