@@ -149,7 +149,7 @@ Their movement and attack patterns will be polished later to align with the rest
   7. slot- Ingredient Field in inventory
   8. IngBook - Book Ingredient Field
   9. Ghost - enemy
-<br>
+
   **UI**
 
 - C# & Theory of CG&A
