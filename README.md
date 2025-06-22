@@ -52,6 +52,11 @@ https://corinnahuber.github.io/CCL4PotionWitch/
 ### Miro board
 https://miro.com/app/board/uXjVINxA_V0=/?share_link_id=535119272679
 
+### User guideline
+Connect Repository to Unity
+either play the game directly in Unity (run Main Menu Scene)
+or Build the project and play the built version
+
 ## Story
 In the twilight-drenched forest of Black Hollow, a young witch named Raven stirs her cauldron, desperate to cleanse her haunted home. 
 Once a place of peace, the forest is now stalked by restless ghosts, echoes of an ancient curse. These spirits feed on fear, growing stronger in the dark old woods.
