@@ -58,6 +58,8 @@ Connect Repository to Unity
 either play the game directly in Unity (run Main Menu Scene)
 <br>
 or Build the project and play the built version
+<br>
+Note: Project is built with Universal 3D in Unity
 
 ## Story
 In the twilight-drenched forest of Black Hollow, a young witch named Raven stirs her cauldron, desperate to cleanse her haunted home. 
