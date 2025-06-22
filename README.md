@@ -25,7 +25,7 @@ Coding, Game Logic
 <br>
 **Helene Urban**
 <br>
-3D Modeling, Game Trailer, Helped with Game Audio
+3D Modeling, Game Trailer
 <br>
 **Nicoleta Dublea**
 <br>
@@ -55,11 +55,11 @@ https://miro.com/app/board/uXjVINxA_V0=/?share_link_id=535119272679
 ## Story
 In the twilight-drenched forest of Black Hollow, a young witch named Raven stirs her cauldron, desperate to cleanse her haunted home. 
 Once a place of peace, the forest is now stalked by restless ghosts, echoes of an ancient curse. These spirits feed on fear, growing stronger in the dark old woods.
- Armed only with her cunning and her potions, Raven must face each ghost and banish them all to restore the forest’s peace—or be consumed by the spirits that hunger in the shadows.
+ Armed only with her cunning and her potions, Raven must face each ghost and banish them all to restore the forest’s peace — or be consumed by the spirits that hunger in the shadows.
 
 ### Ending
 With the last ghost banished, a calm silence returns to the forest. Raven’s potions have driven away the darkness, and the woods can finally breathe again. 
-She stands among the whispering trees, knowing that peace has been restored—at least, for now.
+She stands among the whispering trees, knowing that peace has been restored — at least, for now.
 
 ## Characters
 **Main Character**
@@ -80,8 +80,8 @@ Ghosts
 
 ## Goal
 The player’s ultimate goal is to cleanse the forest by defeating all the ghosts haunting the world.
-To do this, they can craft up to five unique potions, each with its own effect. Ingredients are scattered throughout the world and must be gathered to brew potions at the cauldron inside the witch’s home.
-When a ghost appears, the player must quickly choose the right potion and throw it at the ghost to kill it. But beware — if the ghosts get too close and deal too much damage, it's game over!
+To do this, they can craft up to five unique potions, each with its own effect. Ingredients are scattered throughout the world and must be gathered to brew potions at the cauldron outside the witch’s home.
+When a ghost appears, the player must quickly choose the right potion and throw it at the ghost to kill it. But beware — if the ghosts get too close and deals too much damage, it's game over!
 
 ## System Design
 **Player role:**
@@ -137,7 +137,7 @@ Their movement and attack patterns will be polished later to align with the rest
   5. Different sounds for areas (cave, lake, graveyard,...)
   6. Ambient Sounds (wind, forest, main menu audio)
   7. Ghost Sound
-  8. Footsteps
+  8. Footsteps on grass and wood
 
 - Unity Coding
   1.
