@@ -151,31 +151,97 @@ Their movement and attack patterns will be polished later to align with the rest
   9. Ghost - enemy
 
   **UI**
+- WordScene
+- PauseMenu - canvas
+  - (Panel - bg and Icons)
+- CanvasBook - canvas
+  - Book - potions and text
+  - Ingredients - ingredients for each potion
+- CanvasIcons - canvas
+  - PotionsInventory - always on-screen bar (length 5)
+- PotionsButtons
+  - InventoryManager - gray pannel with ingredients
+  - Hearts - players lives
+- CanvasDialog - conversation box
+
+  **Objects in Main Scene**
+  - World - all the items of the world
+  - Player - Raven
+  - Collectables - holding all ingredients objects scattered around the world
+  - Enemies - all ghost prefabs
+  - Wisp
+  - Witch House - another scene with its own items
 
 - C# & Theory of CG&A
-  1.
-  2.
-  3.
+  1. Billboard - ghost bar camera centering
+  2. Book (logic) - holds potionsList, manages book state for left and right flip, brews potions, checks for ingredients in inventory, removes used inventory and calls Ui updates
+  3. BookToggle - open/ closed
+  4. BookUi - Updates book Ui and Ingredients checked
+  5. CameraIntro - camera world rotation as intro (there but not added to the scene)
+  6. Collectable - key presses for collecting the ingredients (onTrigger)
+  7. Dialogue - the conversation logic and Ui update
+  8. DontDestroy - tracks items that need to persist
+  9. DoorTrigger - triggers the scene change from the world to the house ( works but doesn't teleport correctly)
+  10. Enemy - enemies array, takes players hearts and holds the bar
+  11. EnemyBar - logic for gradient and slider
+  12. EnemyMovements - randomly positions the ghosts inside the nav mesh for the agents in the specified range and sets wander positions. Checks the chase range and players' hearts left to trigger the game over or if all the ghosts are gone. Calls potion throw if ghost clicked
+  13. Inventory - stores ingredients slot data, adds items, calls refresh Ui
+  14. InventoryFieldUi - Sets and clears Inventory Ui
+  15. InventorySlot (simple class)
+  16. InventoryToggle- open/closed
+  17. InventoryUi - holds invenotryFieldUis and refreshes (updates) Ui
+  18. ItemData (scriptable objects)
+  19. MenuToggle - open/closed
+  20. Player- updates the movement based on key presses, camera angle
+  21. PotionData (scriptable objects)
+  22. PotionEffects - methods for potion throwing and potion types effects
+  23. PotionInvenotry - add/removes potion (logic)
+  24. PotionInventoryUi - holds thePotionInventory Update method (the grey boxes at the bottom) and equips the potion
+  25. SceneButtons - calling the methods from the gameManager
+  26. WhichHouseTrigger - opens the door
+  27. WorldSceneManager - all the methods for the scene changes (start, exit..)
 
 ### Implementation Logic Explained
-STILL MISSING
+- Player collects the ingredients scattered in the world ( prefabs holding Item data).
+- Collecting updates inventoryFieldUI and state with ingredient and its quantity.
+- Opening the Book for checking the potions ( data stored as a List of potions holding their respective ingredients). Book is updated every time a player collects an ingredient.
+- If all the ingredients are there for the potion the Brew button enables brewing.
+- Player brews the potion and triggers immediate Update of the book and the Inventory including the potion appearing in the bottom bar.
+- Potion that is at the first position is instantly equipped ( purple color) meaning that potion can be used for defeating a ghost. Clicking on a potion we can change which one we are using.
+- Damage potion – removes 1/3 of the ghosts health
+- Destruction potion – depletes the whole health and ghost is destroyed
+- Stun – stops the ghost movement for a few seconds
+- Ghost and fighting
+
+Each potion and their effect on the player or the ghost is written in the PotionEffects and then called every tine when a player uses the potion on themselves or on the ghost. Again the use of potion triggers updating of the potion inventory ( bottom bar).
+Ghosts are randomly placed around the world using setDestinantion on a navMesh and they roam around the place until they spot a player. If in the given range they start to chase us and the fighting icon appears- the time when we can fight the ghosts. When the icon is gone potion has no effect and cant be used.
+If hit by a ghost, ghost goes into cooldown to give us a chance to escape. Every time we are hit the update method checks if we are out of hearts and ends the game if we are dead.
 
 ### Achievements
 - Very proud of the characters we made, it was a long and hard process at times, especially the rigging and weight painting part for it to look good when animating, but we are really proud of the outcome
 - We tried to make as many assets as possible ourselves so the whole game would have a nice feel to it, we are very happy with how the world looks and feels like
 - We were able to implement almost every function we planned on having, we have a nice combat system, the inventory works really well, the witch is able to brew potions as planned and use them to fight off the ghosts
+- Managed to implement the whole logic as we planned. Biggest achievement is understanding how to make the code reusable and clean and how to reference the data through the classes and pass the necessary data to make all the Updates instant and correct
 
 ### Major Challenges and Solutions
 - One of the biggest challenges was definitely the rigging part and adjusting the weight painting accordingly, it just took a lot longer than expected
 - I faced a lot of challenges in Blender with exporting the right files and also animations not saving, but now I know how to tackle those problems correctly which will safe me a lot of time, energy and struggle in the future
+- Handling Item Persistence and Recognition: When collecting ingredients, cloned items weren’t recognized as the same item by the inventory system and the book didn’t update properly. Fixed by correctly passing and referencing to the same item type.
+- Inventory UI Index Out-of-Bounds: After using potions and updating the UI, selecting or highlighting potions caused index out-of-bounds errors. Added safety checks to reset selectedIndex if it's invalid, and defaulted to auto-selecting the first potion only if none were selected.
+- Wwise Integration Errors: One of the biggest challenges was integrating Wwise into Unity without causing conflicts across branches. After switching from the development branch to wwisedevelopment, Wwise just kept throwing errors when integrating into Unity. After troubleshooting for hours and clearing the Wwise cache from the project's folder, I managed to finally connect Wwise to the project. I finally got help from a teacher who guided me through properly initializing the soundbanks and Ak components, and that resolved the issue.
+- Wwise branch merging conflicts with every branch: The Wwise branch caused merge conflicts with nearly every other branch due to the large number of auto-generated files (.bnk, .xml, .json, Unity .meta files) that Wwise modifies. This made it very difficult to integrate the audio work without interfering with unrelated changes in other parts of the project. Due to the limited time and risk of breaking other working features, we decided not to merge the Wwise branch directly into the main development branch. Instead, the partly functional audio implementation can be found in the wwisedevelopment branch, where sound events are integrated and working.
 
 ### Minor Challenges and Solutions
 - Something I learned when 3D modeling was its very important to keep close attention to the normals of a model, because if the normals are flipped (red) unity won't show those faces, and that can be really painful to fix, the solution is to just always keep checking on the normals in blender
+- Challenges Faced in Door Teleportation System: The player didn’t appear in the right place after teleporting or changing scenes. In the beginning the data was also not preserving which when changing the room which is now fixed bot the player is still when teleporting falling in an open space. Tried to fix it but didn’t work so we left it as it is since it doesn’t affect the rest of the game.
 
 ### Reflections on the Project
 - The animations could be smoother
 - Would have loved to make all the assets ourselves (like mountains, rocks and graveyard)
 - Recording some of the audio elements would have been nice
+- Learned how things really work under the surface and understood the need for planning and structure early on
+- All in all we are proud of what we achieved in such a short amount of time, but there are definitely a lot of improvements we could have made if we had more time :)
+
 
 
 
