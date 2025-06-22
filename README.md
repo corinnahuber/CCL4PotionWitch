@@ -10,7 +10,7 @@ Student ID: cc231036, cc231032, cc231043, cc231045
 <br>
 BCC Group: B and C
 <br>
-Witch's Brew
+**Witch's Brew**
 <br>
 by Sara Beslic, Corinna Huber, Helene Urban, Nicoleta Dublea
 
